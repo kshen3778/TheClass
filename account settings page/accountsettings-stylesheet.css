@@ -15,6 +15,16 @@
 }
 #slogan{
     position: absolute;
-    top: 500px;
+    top: 350px;
     left: 40%;
+}
+#openlogin{
+    position: absolute;
+    top: 400px;
+    left: 45%;
+    height: 30px;
+    width: 200px;
+    background-color:firebrick;
+    border-radius: 5px;
+    text-align: center;
 }
