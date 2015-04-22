@@ -28,3 +28,27 @@
     border-radius: 5px;
     text-align: center;
 }
+#logintab{
+    position: absolute;
+    top: 600px;
+    left: 45%;
+    height: 400px;
+    width: 500px;
+    background-color: #006BAD;
+}
+
+#username{
+    border:2px solid #42A7FF; 
+    height: 25px; 
+    width: 340px; 
+    background-color: #42A7FF; 
+    outline-color: #006BAD;
+}
+#password{
+    border:2px solid #42A7FF; 
+    height: 25px; 
+    width: 340px; 
+    background-color: #42A7FF; 
+    color: white; 
+    outline-color: #006BAD;
+}
