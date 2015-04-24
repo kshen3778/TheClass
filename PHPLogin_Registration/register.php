@@ -1,33 +1,13 @@
-<!-- <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Register</title>
-		<link rel="stylesheet" type="text/css" href="style-sign.css">
-	</head>
-	<body id="body-color">
-		
-		<div id="register-form">
-			<fieldset style="width:30%"><legend>Register as User</legend>
-				<form method="POST" action ="">
-					Email <br><input type="email" name="email" size="40"><br>
-					User <br><input type="text" name="user" size="40"><br>
-					Password <br><input type="password" name="pass" size="40"><br>
-					Confirm Password <br><input type="password" name="confpass" size="40"><br>
-					<input id="button" type="submit" name="submit" value="Register">
-				</form>
-			</fieldset>
-		</div> -->
+
 		<?php
 			session_start();
 			//Connection Config
-			define('DB_HOST','localhost'); 
-			define('DB_NAME','test'); //name of database
-			define('DB_USER','root'); //mysql user
-			define('DB_PASSWORD',''); //mysql password
-			$con = new PDO('mysql:host=localhost;dbname=test','root','');
-			//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(mysqli_connect_error());
-			//$db = mysqli_select_db($con,DB_NAME) or die(mysqli_connect_error()); 
+			include 'config.php';
+			
+			$con = new PDO('mysql:host="'. DB_HOST .'";dbname="'. DB_NAME .'"', DB_USER,DB_PASSWORD);
+
 			//Registration
+			
 			function Register($con){
 				if(isset($_POST['user']) && isset($_POST['pass'])){
 					$username = $_POST['user'];
@@ -94,7 +74,6 @@
 				Register($con);
 			}
 	?>
-<!--	</body>
-</html> -->
+
 
 

@@ -1,13 +1,13 @@
 <?php
 session_start(); //start the session for user profile page
 
-define('DB_HOST','localhost'); 
+/*define('DB_HOST','localhost'); 
 define('DB_NAME','test'); //name of database
 define('DB_USER','root'); //mysql user
-define('DB_PASSWORD',''); //mysql password
+define('DB_PASSWORD',''); //mysql password*/
+include 'config.php';
 
-$con = new PDO('mysql:host=localhost;dbname=test','root','');
-
+$con = new PDO('mysql:host="'. DB_HOST .'";dbname="'. DB_NAME .'"', DB_USER,DB_PASSWORD);
 function SignIn($con){
 	$user = $_POST['user2']; //user input field from html
 	$pass = $_POST['pass2']; //pass input field from html
