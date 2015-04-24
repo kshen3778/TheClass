@@ -4,7 +4,41 @@
 .center{
     margin: 0 auto;
 }
-
+.loginform{
+    padding-left: 5px;
+    position: relative;
+    border:2px solid #42A7FF; 
+    height: 25px;
+    background-color: #42A7FF; 
+    outline-color: #006BAD;
+    font-size: 15px;
+}
+#closetablog{
+ 	width: 18px;
+	height: 18px;
+	background: #005B80;
+	border-radius:9px;
+	position: relative;
+	top: 10px;
+	left: 360px;
+    cursor: pointer;
+}
+#closetabreg{
+ 	width: 18px;
+	height: 18px;
+	background: #005B80;
+	border-radius:9px;
+	position: relative;
+	top: 10px;
+	left: 360px;
+    cursor: pointer;
+}
+.xbutton{
+    color: white;
+    position: relative;
+    left: 4px;
+    top: -2px;
+}
 #navbar{
     position: fixed;
     top: 0px;
@@ -35,6 +69,7 @@
     border-radius: 5px;
     text-align: center;
     padding-top: 5px;
+    cursor: pointer;
 }
 #logintab{
     position: relative;
@@ -46,28 +81,14 @@
 }
 
 #username{
-    padding-left: 5px;
-    position: relative;
-    top: 30px;
+    top: 20px;
     left: 20px;
-    border:2px solid #42A7FF; 
-    height: 25px; 
     width: 350px; 
-    background-color: #42A7FF; 
-    outline-color: #006BAD;
-    font-size: 15px;
 }
 #password{
-    padding-left: 5px;
-    position: relative;
-    top: 55px;
+    top: 45px;
     left: 20px;
-    border:2px solid #42A7FF; 
-    height: 25px; 
     width: 350px; 
-    background-color: #42A7FF; 
-    outline-color: #006BAD;
-    font-size: 15px;
 }
 #SigninButton{
     height: 40px;
@@ -76,7 +97,7 @@
 	background-color: #00A32C;
 	position: relative;
     left: 19px;
-	top:75px;
+	top:65px;
 	cursor: pointer;
 	outline-color: #006BAD;
 }
@@ -85,9 +106,9 @@
 }
 #remember-background{
     position: relative;
-    height: 50px;
+    height: 40px;
     width: 400px;
-    top: 100px;
+    top: 90px;
     border-radius: 10px;
     background-color: #00BFFF;
     z-index: 1;
@@ -128,15 +149,6 @@
     background-color: #D4FFFE;
     content: url(http://www.mariowiki.com/images/e/e9/Check_mark.svg);
 }
-
-
-
-
-
-
-
-
-
 #logintab ::-webkit-input-placeholder{
 color: white;
 }
@@ -146,3 +158,102 @@ color: white;
 #logintab :-ms-input-placeholder{
 color: white;
 }
+/*registrationtab*/
+#register{
+    position: relative;
+    top: 440px;
+    height: 30px;
+    width: 200px;
+    background-color:coral;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+#registrationtab{
+    position: relative;
+    top: 100px;
+    height: 350px;
+    width: 400px;
+    background-color: #006BAD;
+    border-radius: 10px;
+}
+#regbackground{
+    position: relative;
+    height: 70px;
+    width: 400px;
+    top: 150px;
+    border-radius: 10px;
+    background-color: #00BFFF;
+    z-index: 1;
+}
+#regbacktop{
+    position: relative;
+    height: 15px;
+    width: 400px;
+    top: 75px;
+    background-color: #00BFFF;
+    z-index: 2;
+}
+#regemail{
+    top: 20px;
+    left: 20px;
+    width: 350px; 
+}
+#regusername{
+    top: 45px;
+    left: 20px;
+    width: 350px; 
+}
+#regpassword{
+    top: 70px;
+    left: 20px;
+    width: 130px; 
+}
+#regpasswordcon{
+    top: 70px;
+    left: 30px;
+    width: 195px; 
+}
+#regfirstname{
+    top: 95px;
+    left: 20px;
+    width: 160px; 
+}
+#reglastname{
+    top: 95px;
+    left: 30px;
+    width: 165px; 
+}
+#regaccount{
+    height: 30px;
+	width: 362px;
+	border: 2px solid #006BAD;
+	background-color: #00A32C;
+	position: relative;
+    left: 19px;
+	top:120px;
+	cursor: pointer;
+	outline-color: #006BAD;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+#regaccount:hover{
+	background-color: #308014;
+}
+#registrationtab ::-webkit-input-placeholder{
+color: white;
+}
+#registrationtab ::-moz-placeholder{
+color: white;
+}
+#registrationtab :-ms-input-placeholder{
+color: white;
+}
+
+
+
+
+
+
