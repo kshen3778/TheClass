@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#openlogin").on("click",function(){
+$("#aboutyou").hide();
+    $("#aboutyoupar").on("click",function(){
         alert("hi");
     });
 });
