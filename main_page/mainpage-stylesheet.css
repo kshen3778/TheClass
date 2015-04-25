@@ -17,7 +17,7 @@
  	width: 18px;
 	height: 18px;
 	background: #005B80;
-	border-radius:9px;
+	border-radius:10px;
 	position: relative;
 	top: 10px;
 	left: 360px;
@@ -27,7 +27,7 @@
  	width: 18px;
 	height: 18px;
 	background: #005B80;
-	border-radius:9px;
+	border-radius:10px;
 	position: relative;
 	top: 10px;
 	left: 360px;
@@ -36,7 +36,7 @@
 .xbutton{
     color: white;
     position: relative;
-    left: 4px;
+    left: 5px;
     top: -2px;
 }
 #navbar{
