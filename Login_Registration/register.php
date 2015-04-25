@@ -9,11 +9,13 @@
 			//Registration
 			
 			function Register($con){
-				if(isset($_POST['user']) && isset($_POST['pass'])){
+				if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['confpass']) && isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname'])){
 					$username = $_POST['user'];
 					$email = $_POST['email'];
 					$password = $_POST['pass'];
 					$cpassword = $_POST['confpass'];
+					$firstname = $_POST['firstname'];
+					$lastname = $_POST['lastname'];
 					//check username for weird symbols
 					if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $username)){
 						// one or more of the 'special characters' found in string
