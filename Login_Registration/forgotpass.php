@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!--<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Reset Password</title>
@@ -14,43 +14,42 @@
 					<input id="button" type="submit" name="submit" value="Submit">
 				</form>
 			</fieldset>
-		</div>
+		</div> -->
 	<?php
 		//Connection Config
-		define('DB_HOST','localhost'); 
-		define('DB_NAME','test'); //name of database
-		define('DB_USER','root'); //mysql user
-		define('DB_PASSWORD',''); //mysql password
-		$con = new PDO('mysql:host=localhost;dbname=test','root','');
-		$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+		include 'config.php';
 		
-		function passReset($con, mysqli $con2){
-			if(isset($_POST['user'])){
-				$query = $con->prepare("SELECT * FROM UserName WHERE userName = :user");
+		$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
+		//$con = new PDO('mysql:host=localhost;dbname=test','root','');
+		//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+		
+		function passReset($con){
+			if(!empty($_POST['username'])){
+				$username = $_POST['username'];
+				
+				$query = $con->prepare("SELECT * FROM accounts WHERE username = :user");
 				$query->bindParam(':user',$username);
-				$username = $_POST['user'];
 				
 				$query->execute();
 				$result = $query->fetch(PDO::FETCH_ASSOC);
 				
 				
 				if(!empty($result)){ //if the user exists
-					//get result and store in array
-					//$rows = mysqli_fetch_array($result);
+					
+					//TODO: get the email from the selected row(because we no longer have an email input field)
+					
 					//generate unique password reset token
 					$key = uniqid(mt_rand(), true);
 					$token = md5($_POST['email'].$key);
 					
 					
 					//store token into the table in user's row and set it to expire in 48 hours
-					$query2 = $con->prepare("UPDATE UserName SET resetkey = '$token', expire = NOW() + INTERVAL 48 HOUR WHERE userName = :user");
+					$query2 = $con->prepare("UPDATE accounts SET resetkey = '$token', expire = NOW() + INTERVAL 48 HOUR WHERE username = :user");
 					$query2->bindParam(':user',$username);
 					$query2->execute();
 					
-					//set the token to expire in 48 hours
-					/*$query3 = $con->prepare("CREATE EVENT delete_expired_101 ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 48 HOUR DO UPDATE UserName SET resetkey = 'NULL' WHERE userName = :user");
-					$query3->bindParam(':user',$username);
-					$query3->execute();*/
+					//TODO: send email to the email retrieved from the first query
+					//TODO: give user the link to the password reset page
 					
 						//send user password reset email
 						require '/phpmailer/PHPMailerAutoload.php';
@@ -96,10 +95,10 @@
 		}
 		
 		if(isset($_POST['submit'])){
-			passReset($con, $con2);
+			passReset($con);
 		}
 		
 	?>
 	
-	</body>
-</html>
+<!--	</body>
+</html> -->
