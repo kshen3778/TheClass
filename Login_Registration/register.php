@@ -3,19 +3,19 @@
 			session_start();
 			//Connection Config
 			include 'config.php';
-			
-			$con = new PDO('mysql:host="'. DB_HOST .'";dbname="'. DB_NAME .'"', DB_USER,DB_PASSWORD);
 
+			$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
+		
 			//Registration
 			
 			function Register($con){
-				if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['confpass']) && isset($_POST['email']) && isset($_POST['firstname']) && isset($_POST['lastname'])){
-					$username = $_POST['user'];
-					$email = $_POST['email'];
-					$password = $_POST['pass'];
-					$cpassword = $_POST['confpass'];
-					$firstname = $_POST['firstname'];
-					$lastname = $_POST['lastname'];
+				if(isset($_POST['regusername']) && isset($_POST['regpassword']) && isset($_POST['regpasswordcon']) && isset($_POST['regemail']) && isset($_POST['regfirstname']) && isset($_POST['reglastname'])){
+					$username = $_POST['regusername'];
+					$email = $_POST['regemail'];
+					$password = $_POST['regpassword'];
+					$cpassword = $_POST['regpasswordcon'];
+					$firstname = $_POST['regfirstname'];
+					$lastname = $_POST['reglastname'];
 					//check username for weird symbols
 					if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $username)){
 						// one or more of the 'special characters' found in string
@@ -37,7 +37,7 @@
 					}
 					
 					//check if username is taken
-					$check = $con->prepare("SELECT * FROM UserName WHERE userName=:user");
+					$check = $con->prepare("SELECT * FROM accounts WHERE username=:user");
 					$check->bindParam(':user',$username);
 					$check->execute();
 					$result = $check->fetch(PDO::FETCH_ASSOC);
@@ -52,12 +52,14 @@
 						$hpassword = password_hash($password, PASSWORD_DEFAULT);
 						
 						//Prepared statements for SQL injection prevention
-						$query = $con->prepare("INSERT INTO UserName (userName, pass, email) VALUES (:name,:hpassword,:email) ");
+						$query = $con->prepare("INSERT INTO accounts (username, password, email, firstname, lastname) VALUES (:name,:hpassword,:email,:fname,:lname) ");
 							
 						//bind parameters
 						$query->bindParam(':name',$username);
 						$query->bindParam(':hpassword',$hpassword);
 						$query->bindParam(':email',$email);
+						$query->bindParam(':fname',$firstname);
+						$query->bindParam(':lname',$lastname);
 						
 						if($query->execute()){
 							//Query successful
@@ -72,7 +74,7 @@
 				}
 			}
 			
-			if(isset($_POST['submit'])){
+			if(isset($_POST['regaccount'])){
 				Register($con);
 			}
 	?>
