@@ -1,6 +1,5 @@
 
 		<?php
-			session_start();
 			//Connection Config
 			include 'config.php';
 
@@ -9,7 +8,7 @@
 			//Registration
 			
 			function Register($con){
-				if(isset($_POST['regusername']) && isset($_POST['regpassword']) && isset($_POST['regpasswordcon']) && isset($_POST['regemail']) && isset($_POST['regfirstname']) && isset($_POST['reglastname'])){
+				if(!empty($_POST['regusername']) && !empty($_POST['regpassword']) && !empty($_POST['regpasswordcon']) && !empty($_POST['regemail']) && !empty($_POST['regfirstname']) && !empty($_POST['reglastname'])){
 					$username = $_POST['regusername'];
 					$email = $_POST['regemail'];
 					$password = $_POST['regpassword'];
@@ -70,7 +69,7 @@
 						}
 					}
 				}else{
-					echo "Error2";
+					echo "Please fill out the information";
 				}
 			}
 			
