@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'config.php';
 
 $con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
@@ -22,7 +22,14 @@ function SignIn($con){
 			// $username and $pw are from the rows
 
 			//$_SESSION['userName'] = $row['pass'];
+			$_SESSION['username'] = $user;
+			$_SESSION['password'] = $pass;
+			$_SESSION['email'] = $data['email'];
+			$_SESSION['firstname'] = $data['firstname'];
+			$_SESSION['lastname'] = $data['lastname'];
+			
 			echo "Successfully logged in.";
+			header("Location: ../account_settings_page/accountsettings-index.php");
 			//TODO: direct user to main page
 		}
 		else { 

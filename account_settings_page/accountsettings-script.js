@@ -30,7 +30,7 @@ $(document).ready(function(){
     
     $("#savechanges").on("click",function(){
         $(ele).siblings(".personaldata").remove();
-    var perdata = $("#yourinterests").val();
+		var perdata = $("#yourinterests").val();
         perdata = perdata + $("#aboutyou").val();
         $(ele).after('<div class="personaldata">'+perdata+'</div>');
     $('#yourinterests, #aboutyou').val("");

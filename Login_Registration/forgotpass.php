@@ -40,7 +40,7 @@
 					
 					//generate unique password reset token
 					$key = uniqid(mt_rand(), true);
-					$token = md5($_POST['email'].$key);
+					$token = md5($result['email'].$key);
 					
 					
 					//store token into the table in user's row and set it to expire in 48 hours
@@ -94,7 +94,7 @@
 			}
 		}
 		
-		if(isset($_POST['submit'])){
+		if(isset($_POST['forgotpass'])){
 			passReset($con);
 		}
 		

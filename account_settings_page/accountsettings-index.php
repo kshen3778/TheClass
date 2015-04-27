@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<link rel="stylesheet" type="text/css" href="accountsettings-stylesheet.css"/>
@@ -10,7 +13,6 @@
 <body>
     <div id="navbar">
     <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;"></input>
-    <div navprofile>
     </div>
 <div id="page" class="center">
     <div id="topbar"></div>
@@ -30,9 +32,13 @@
         </div>
         <div id="personalinfo">
             <!-- get rid of backgorund color-->
-        <p class="unchangeinfo">Username</p>
+        <p class="unchangeinfo">Username:
+		<?php echo $_SESSION['username'];?>
+		</p>
         <p class="unchangeinfo">Reset Password</p>
-        <p class="unchangeinfo">E-mail</p>
+        <p class="unchangeinfo">E-mail:
+		<?php echo $_SESSION['email'];?>
+		</p>
             <div>
                 <textarea id="yourinterests" class="write" placeholder="What do you like?"></textarea>
                 <div class="edit" title="click me to edit"> Your Interests:</div>
