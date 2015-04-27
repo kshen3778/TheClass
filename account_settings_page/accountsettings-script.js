@@ -23,7 +23,9 @@ $(document).ready(function(){
         $("#savechanges").show();
         $(ele).siblings(".personaldata").hide();
         var replacepertext = $(ele).siblings(".personaldata");
+        if($(ele).siblings(".write").val()==0){
         $(ele).siblings(".write").val(replacepertext.html());
+        }
     });
     
     $("#savechanges").on("click",function(){
@@ -38,9 +40,17 @@ $(document).ready(function(){
     $("#cancelchangeinfo").on("click",function(){
             resetchangecomple();
         $(".personaldata").show();
+        $('#yourinterests, #aboutyou').val("");
     });
-    
-    
+    $("#yourpeertutoringsessions").hide();
+    $("#activitycontenttab").on("click",function(){
+        $("#youruploadedcontent").show();
+        $("#yourpeertutoringsessions").hide();
+    });
+    $("#activitypeertuttab").on("click",function(){
+        $("#youruploadedcontent").hide();
+        $("#yourpeertutoringsessions").show();
+    });
     /*$(document).mouseup(function(e){
         var container = $(".write, #personalinfo, .unchangeinfo");
         if (!container.is(e.target)){

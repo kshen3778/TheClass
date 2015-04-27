@@ -17,11 +17,16 @@
     position: relative;
     padding-top: 30px;
     width: 200px;
-    left: 20px;   
+    left: 20px;
+    cursor: pointer;
 }
 .unchangeinfo{
     position: relative;
     left:20px;
+}
+.personaldata{
+ background-color: bisque;
+    padding-left: 20px;
 }
 #page{
  background-color: aqua;
@@ -52,8 +57,8 @@
 }
 #yourstats{
     position: relative;
-    left: 500px;
-    top: -120px;
+    left: 550px;
+    top: -330px;
     height: 200px;
     width: 700px;
     background-color: antiquewhite;
@@ -65,8 +70,8 @@
 }
 #personalinfo{
     position: relative;
-    top: -100px;
-    left: 100px;
+    top: -300px;
+    left: 50px;
     height: 500px;
     width: 300px;
     background-color: antiquewhite
@@ -80,4 +85,72 @@
     position: absolute;
     left: 150px;
     top: 400px;
+}
+#profile{
+ position: relative;
+    height: 200px;
+    width: 350px;
+    background-color: darkcyan;
+    top: -113px;
+    left: 50px;
+}
+#profiledata{
+    position: absolute;
+    top: 50px;
+    left:200px;
+}
+#reputation{
+ position: relative;
+    top: 40px;
+}
+#followers{
+ position: relative;
+    top: 80px;
+}
+#youractivity{
+    position: relative;
+    top: -750px;
+    left: 450px;
+    height: 400px;
+    width: 700px;
+    background-color: darkorange;
+}
+#activitytabs{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+#activitycontenttab{
+    position: relative;
+    height: 35px;
+    width: 150px;
+    background-color:darkseagreen;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+#activitypeertuttab{
+    position: relative;
+    height: 35px;
+    width: 150px;
+    background-color:forestgreen;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+#youruploadedcontent{
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    height: 200px;
+    width: 400px;
+    background-color:darkseagreen;
+}
+#yourpeertutoringsessions{
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    height: 200px;
+    width: 400px;
+    background-color:forestgreen;
 }
