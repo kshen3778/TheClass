@@ -9,9 +9,10 @@
 		</head>
 <body>
     <div id="navbar">
-    <input id="generalsearch"type="text" placeholder="search" style="padding-left: 5px;"></input>
+    <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;"></input>
     </div>
-    <div id="htmlpage" class="center">
+<div id="page" class="center">
+    <div id="topbar"></div>
         <div id="yourstats">
             <p id="statistics">Statistics</p>
             <p id="membersince">Member since</p>
@@ -19,12 +20,19 @@
             <p id="membersince">Content Downloaded:</p>
         </div>
         <div id="personalinfo">
-        <p>Username</p>
-        <p>Reset Password</p>
-        <p>E-mail</p>
-        <p>Intrests</p>
-        <textarea id="aboutyou" placeholder="tell us a bit of yourself"></textarea>
-            <p id="aboutyoupar"> tell us a bit of yourself</p>
+        <p class="unchangeinfo">Username</p>
+        <p class="unchangeinfo">Reset Password</p>
+        <p class="unchangeinfo">E-mail</p>
+            <div>
+                <textarea id="yourinterests" class="write" placeholder="What do you like?"></textarea>
+                <div class="edit" title="click me to edit"> Your Interests:</div>
+            </div>
+            <div>
+                <textarea id="aboutyou" class="write" placeholder="tell us a bit of yourself"></textarea>
+                <div id="aboutyoupar" class="edit" title="click me to edit">About You:</div>
+            </div>
+            <button id="savechanges">Save Changes</button>
+            <button id="cancelchangeinfo">Cancel</button>
         </div>
     </div>
 </body>
