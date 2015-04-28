@@ -25,9 +25,7 @@ session_start();
     <div id="profile">
     <!--do the photo link for people that don't have a pic-->
         <div id="profiledata">
-            <div id="name">
-			<?php echo $_SESSION['firstname'] ." ". $_SESSION['lastname']?>
-			</div>
+            <div id="name"></div>
             <div id="reputation">...reputation</div>
             <div id="followers">...followers</div>
         </div>

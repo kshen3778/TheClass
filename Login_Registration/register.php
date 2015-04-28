@@ -1,6 +1,5 @@
 
 		<?php
-			session_start();
 			//Connection Config
 			include 'config.php';
 
@@ -53,8 +52,7 @@
 						
 						//Prepared statements for SQL injection prevention
 						$query = $con->prepare("INSERT INTO accounts (username, password, email, firstname, lastname) VALUES (:name,:hpassword,:email,:fname,:lname) ");
-						
-						
+							
 						//bind parameters
 						$query->bindParam(':name',$username);
 						$query->bindParam(':hpassword',$hpassword);
@@ -64,12 +62,7 @@
 						
 						if($query->execute()){
 							//Query successful
-							$_SESSION['username'] = $username;
-							$_SESSION['email'] = $email;
-							$_SESSION['firstname'] = $firstname;
-							$_SESSION['lastname'] = $lastname;
 							echo "User has been created successfully";
-							header("Location: ../account_settings_page/accountsettings-index.php");
 							//direct user to another page
 						}else{
 							echo "Error1";
