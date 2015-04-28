@@ -40,11 +40,11 @@ session_start();
 		<?php echo $_SESSION['email'];?>
 		</p>
             <div>
-                <textarea id="yourinterests" class="write" placeholder="What do you like?"></textarea>
+                <textarea maxlength="400" id="yourinterests" class="write" placeholder="What do you like?"></textarea>
                 <div class="edit" title="click me to edit"> Your Interests:</div>
             </div>
             <div>
-                <textarea id="aboutyou" class="write" placeholder="tell us a bit of yourself"></textarea>
+                <textarea maxlength="400" id="aboutyou" class="write" placeholder="tell us a bit of yourself"></textarea>
                 <div id="aboutyoupar" class="edit" title="click me to edit">About You:</div>
             </div>
             <button id="savechanges">Save Changes</button>

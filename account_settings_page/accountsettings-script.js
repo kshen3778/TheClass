@@ -13,6 +13,7 @@ $(document).ready(function(){
         resetchangeinfo();
         hideeditbuttons();
     };
+    //outline: none;
     var ele;
     $('.edit').on("click",function(event){
         resetchangeinfo();
@@ -30,8 +31,7 @@ $(document).ready(function(){
     
     $("#savechanges").on("click",function(){
         $(ele).siblings(".personaldata").remove();
-		var perdata = $("#yourinterests").val();
-        perdata = perdata + $("#aboutyou").val();
+		var perdata = $(ele).siblings(".write").val();
         $(ele).after('<div class="personaldata">'+perdata+'</div>');
     $('#yourinterests, #aboutyou').val("");
         resetchangecomple();
