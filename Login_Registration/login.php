@@ -23,7 +23,6 @@ function SignIn($con){
 
 			//$_SESSION['userName'] = $row['pass'];
 			$_SESSION['username'] = $user;
-			$_SESSION['password'] = $pass;
 			$_SESSION['email'] = $data['email'];
 			$_SESSION['firstname'] = $data['firstname'];
 			$_SESSION['lastname'] = $data['lastname'];
