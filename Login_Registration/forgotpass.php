@@ -94,7 +94,7 @@
 			}
 		}
 		
-		if(isset($_POST['forgotpass'])){
+		if(isset($_POST['submit'])){
 			passReset($con);
 		}
 		

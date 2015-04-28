@@ -1,6 +1,32 @@
+/*function fpass() {
+      $.ajax({
+           type: "POST",
+           url: '../Login_Registration/forgotpass.php',
+           data:{action:'call_this'},
+           success:function(html) {
+             alert(html);
+           }
+
+      });
+ }*/
 $(document).ready(function() {
     $("#logintab").hide();
     $("#registrationtab").hide();
+	
+	//forgot password
+	$("#forgotpass").on('click', function(){
+		alert("hi");
+		/*$.ajax({
+		   url: '../Login_Registration/forgotpass.php',
+		   dataType: 'json',
+		   success: function(data){
+				//data returned from php
+				alert(data);
+		   }
+		});*/
+	)};
+	
+	
     
     $("#openlogin").on("click",function(){
         $("#openlogin").animate({ top: '+=100px'}, { duration: 500, queue: false });
