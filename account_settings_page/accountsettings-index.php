@@ -12,7 +12,13 @@ session_start();
 		</head>
 <body>
     <div id="navbar">
-    <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;"></input>
+    <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;">
+        <div id="navprofile">
+        </div>
+                <div id="profilesettingcon">
+                    <div id="accountsettings">account settings</div>
+                    <div id="logout">logout</div>
+                </div>
     </div>
 <div id="page" class="center">
     <div id="topbar"></div>

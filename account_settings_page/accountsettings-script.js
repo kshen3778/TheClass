@@ -1,4 +1,13 @@
 $(document).ready(function(){
+    $("#profilesettingcon").hide();
+    $("#navprofile").on("click",function(){
+        $("#profilesettingcon").stop().slideToggle("fast");
+    });
+    
+    
+    
+    
+    
     $(".write").hide();
     var hideeditbuttons = function(){
         $("#cancelchangeinfo").hide();
@@ -51,6 +60,11 @@ $(document).ready(function(){
         $("#youruploadedcontent").hide();
         $("#yourpeertutoringsessions").show();
     });
+    
+    
+    
+    
+    
     /*$(document).mouseup(function(e){
         var container = $(".write, #personalinfo, .unchangeinfo");
         if (!container.is(e.target)){

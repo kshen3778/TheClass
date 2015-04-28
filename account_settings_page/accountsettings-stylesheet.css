@@ -49,11 +49,34 @@
     width: 300px;
     height:20px;
 }
+#navprofile{
+    position: relative;
+    top: -26px;
+    left: 1050px;
+    width: 300px;
+    height: 5vh;
+    z-index: 6;
+    background-color:firebrick;
+}
+#profilesettingcon{
+    position: relative;
+    top: -26px;
+    width: 200px;
+    height: 200px;
+    left: 1050px;
+    background-color: darkmagenta;
+    z-index: 100;
+}
+#logout{
+    text-align: center;
+    cursor: pointer;
+    background-color: darkgoldenrod;
+}
 #topbar{
  background-color:darkslateblue;
     height: 200px;
     width: 1300px;
-    z-index: 1;
+    z-index: -1;
 }
 #yourstats{
     position: relative;
@@ -62,6 +85,7 @@
     height: 200px;
     width: 700px;
     background-color: antiquewhite;
+    z-index: 0;
 }
 #statistics{
     top: 20px;
