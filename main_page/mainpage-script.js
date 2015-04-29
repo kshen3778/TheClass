@@ -15,15 +15,14 @@ $(document).ready(function() {
 	
 	//forgot password
 	$("#forgotpass").on('click', function(){
-		alert("hi");
-		/*$.ajax({
-		   url: '../Login_Registration/forgotpass.php',
-		   dataType: 'json',
-		   success: function(data){
+		alert("sup");
+		$.ajax({
+		   url: 'forgotpass.php',
+		   success: function(){
 				//data returned from php
-				alert(data);
+				alert("success");
 		   }
-		});*/
+		});
     });
 	
 	
