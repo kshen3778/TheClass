@@ -1,28 +1,12 @@
-<!--<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Reset Password</title>
-		<link rel="stylesheet" type="text/css" href="style-sign.css">
-	</head>
-	<body id="body-color">
-		
-		<div id="register-form">
-			<fieldset style="width:30%"><legend>Enter your email to reset password</legend>
-				<form method="POST" action ="">
-					User <br><input type="text" name="user" size="40"><br>
-					Email <br><input type="email" name="email" size="40"><br>
-					<input id="button" type="submit" name="submit" value="Submit">
-				</form>
-			</fieldset>
-		</div> -->
+
 	<?php
 		//Connection Config
-		include 'config.php';
+		include '../Login_Registration/config.php';
 		
 		$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
 		//$con = new PDO('mysql:host=localhost;dbname=test','root','');
 		//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-		
+		echo "hieveryone";
 		function passReset($con){
 			if(!empty($_POST['username'])){
 				$username = $_POST['username'];
@@ -94,11 +78,9 @@
 			}
 		}
 		
-		if(isset($_POST['submit'])){
+		if(isset($_POST['name'])){
+			echo "this function works";
 			passReset($con);
 		}
 		
 	?>
-	
-<!--	</body>
-</html> -->

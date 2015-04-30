@@ -1,29 +1,32 @@
 /*function fpass() {
-      $.ajax({
-           type: "POST",
-           url: '../Login_Registration/forgotpass.php',
-           data:{action:'call_this'},
-           success:function(html) {
-             alert(html);
-           }
-
-      });
- }*/
+    alert("fpass function");
+		$.ajax({
+		   type: "POST",
+		   url: 'forgotpass.php',
+		   data: form.serialize()
+		   success: function(data){
+				//data returned from php
+				console.log(data);
+		   }
+		});
+}*/
 $(document).ready(function() {
     $("#logintab").hide();
     $("#registrationtab").hide();
 	
 	//forgot password
 	$("#forgotpass").on('click', function(){
-		alert("sup");
+		var username = document.getElementById('username').value;
+		console.log("forgotpass function is running");
 		$.ajax({
+		   type: "POST",
 		   url: 'forgotpass.php',
-		   success: function(){
-				//data returned from php
-				alert("success");
+		   data: { name: username},
+		   success: function(data){
+				console.log(data);
 		   }
 		});
-    });
+    })
 	
 	
     
