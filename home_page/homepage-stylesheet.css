@@ -1,0 +1,147 @@
+*{
+ font-family: Verdana;   
+}
+.center{
+    margin: 0 auto;
+}
+.xbutton{
+    color: white;
+    position: relative;
+    left: 4px;
+    top: -2px;
+}
+#closecreate{
+ 	width: 18px;
+	height: 18px;
+	background: #005B80;
+	border-radius:9px;
+	position: relative;
+	top: 10px;
+	left: 360px;
+    cursor: pointer;
+}
+body{
+ background-color:beige;
+    height: 98vh;
+}
+#htmlpage{
+ background-color: aqua;
+    position: relative;
+    top: 4.1vh;
+    width: 1300px;
+    height: 95vh;
+}
+#navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: cornflowerblue;
+    height: 5vh;
+    min-width: 100%;
+}
+#generalsearch{
+    position: relative;
+    top:1vh; 
+    left: 200px;
+    width: 300px;
+    height:20px;
+}
+#navprofile{
+    position: relative;
+    top: -26px;
+    left: 1050px;
+    width: 200px;
+    height: 5vh;
+    background-color:firebrick;
+    cursor: pointer;
+    z-index: 1;
+}
+#profilesettingcon{
+    position: relative;
+    top:-7.8vh;
+    width: 200px;
+    height: 5vh;
+    left: 1050px;
+    background-color: darkmagenta;
+}
+#logout{
+    text-align: center;
+    cursor: pointer;
+    background-color: darkgoldenrod;
+}
+#dashboardandbrowsetabs{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    cursor: pointer;
+}
+#dashboardtab{
+    height: 30px;
+    width: 100px;
+    background-color: dimgrey;
+    display: inline;
+    float: left;
+}
+#browsetab{
+    height: 30px;
+    width: 100px;
+    background-color:darkseagreen;
+    display: inline;
+    float: left;
+}
+#dashboardandbrowsebox{
+    position: absolute;
+    top: 330px;
+    left: 100px;
+}
+#dashboard{
+    position: absolute;
+    height: 300px;
+    width: 1100px;
+    background-color: dimgrey;
+}
+#browse{
+    position: absolute;
+    height: 300px;
+    width: 1100px;
+    background-color: darkseagreen;
+}
+#peertutoring{
+    position: absolute;
+    top: 150px;
+    left:800px;
+}
+#create{
+    position: relative;
+    top: 150px;
+    left:950px;
+    cursor: pointer;
+    width: 200px;
+}
+#forum{
+    position: absolute;
+    top: 150px;
+    left:1050px; 
+}
+#createpopupbox{
+    position: relative;
+    top: 200px;
+    height: 21vh;
+    width: 400px;
+    background-color: red;
+    z-index: 20;
+}
+#resourcelessoncreate{
+    position: relative;
+    text-align: center;
+}
+#resourcelessoncreate{
+    position: relative;
+    top: 4vh;
+    text-align: center;
+}
+#coursecreate{
+    position: relative;
+    top: 7vh;
+    text-align: center;
+}
