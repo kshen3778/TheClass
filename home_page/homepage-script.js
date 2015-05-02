@@ -46,19 +46,29 @@ $(document).ready(function() {
     });
     
     $("#dashboardyourcourses").on("click",function(){
-        $("#dashboardyourcourses").css({"height":"20px","border-bottom":"none"});
-        $("#dashboardyourlikedcontent").css({"height":"19px","border-bottom":"solid black 1px"});
-        $("#dashboardyoursubs").css({"height":"19px","border-bottom":"solid black 1px"});
+        $("#dashboardyourcourses").css({"height":"21px","border-bottom":"none"});
+        $("#dashboardyourlikedcontent").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#dashboardyoursubs").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#mycoursesbox").show();
+        $("#mylikesbox").hide();
+        $("#mysubsbox").hide();
     });
     $("#dashboardyourlikedcontent").on("click",function(){
-        $("#dashboardyourlikedcontent").css({"height":"20px","border-bottom":"none"});
-        $("#dashboardyoursubs").css({"height":"19px","border-bottom":"solid black 1px"});
-        $("#dashboardyourcourses").css({"height":"19px","border-bottom":"solid black 1px"});
+        $("#dashboardyourlikedcontent").css({"height":"21px","border-bottom":"none"});
+        $("#dashboardyoursubs").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#dashboardyourcourses").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#mycoursesbox").hide();
+        $("#mylikesbox").show();
+        $("#mysubsbox").hide();
+        
     });
     $("#dashboardyoursubs").on("click",function(){
-        $("#dashboardyoursubs").css({"height":"20px","border-bottom":"none"});
-        $("#dashboardyourcourses").css({"height":"19px","border-bottom":"solid black 1px"});
-        $("#dashboardyourlikedcontent").css({"height":"19px","border-bottom":"solid black 1px"});
+        $("#dashboardyoursubs").css({"height":"21px","border-bottom":"none"});
+        $("#dashboardyourcourses").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#dashboardyourlikedcontent").css({"height":"20px","border-bottom":"solid black 1px"});
+        $("#mycoursesbox").hide();
+        $("#mylikesbox").hide();
+        $("#mysubsbox").show();
     });
     
     

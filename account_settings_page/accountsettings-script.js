@@ -1,7 +1,14 @@
+var toggleshowprofile = false;
 $(document).ready(function(){
-    $("#profilesettingcon").hide();
     $("#navprofile").on("click",function(){
-        $("#profilesettingcon").stop().slideToggle("fast");
+        if(toggleshowprofile==true){
+            $("#profilesettingcon").animate({left: "+=200px"});
+            toggleshowprofile=false;
+        }
+        else{
+            $("#profilesettingcon").animate({left: "-=200px"});
+            toggleshowprofile = true;
+        }
     });
     
     

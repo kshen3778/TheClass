@@ -29,43 +29,45 @@
     padding-left: 20px;
 }
 #page{
- background-color: aqua;
-    z-index: -5;
+    background-color: aqua;
+    position: relative;
+    top: 32px;
     width: 1300px;
-    height: 95vh;
+    height: 100vh;
 }
 #navbar{
     position: fixed;
     top: 0px;
     left: 0px;
     background-color: cornflowerblue;
-    height: 5vh;
+    height: 40px;
     min-width: 100%;
+    z-index: 1;
 }
 #generalsearch{
-    position: relative;
-    top:7px; 
-    left: 200px;
+    position: absolute;
+    top: 7px; 
+    left: 150px;
     width: 300px;
     height:20px;
 }
 #navprofile{
     position: relative;
-    top: -26px;
+    top: 0px;
     left: 1050px;
-    width: 300px;
-    height: 5vh;
-    z-index: 6;
+    width: 200px;
+    height: 40px;
     background-color:firebrick;
+    cursor: pointer;
+    z-index: 1;
 }
 #profilesettingcon{
     position: relative;
-    top: -26px;
+    top: -40px;
     width: 200px;
-    height: 200px;
+    height: 40px;
     left: 1050px;
     background-color: darkmagenta;
-    z-index: 100;
 }
 #logout{
     text-align: center;
@@ -76,7 +78,6 @@
  background-color:darkslateblue;
     height: 200px;
     width: 1300px;
-    z-index: -1;
 }
 #yourstats{
     position: relative;
@@ -85,7 +86,6 @@
     height: 200px;
     width: 700px;
     background-color: antiquewhite;
-    z-index: 0;
 }
 #statistics{
     top: 20px;
