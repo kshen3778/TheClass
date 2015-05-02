@@ -6,10 +6,9 @@
 		$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
 		//$con = new PDO('mysql:host=localhost;dbname=test','root','');
 		//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-		echo "hieveryone";
 		function passReset($con){
-			if(!empty($_POST['username'])){
-				$username = $_POST['username'];
+			
+				$username = $_POST['name'];
 				
 				$query = $con->prepare("SELECT * FROM accounts WHERE username = :user");
 				$query->bindParam(':user',$username);
@@ -72,15 +71,15 @@
 						} else {
 							echo 'Message has been sent';
 						}
-				}else{
-					echo "Error, message not sent";
-				}
+				
 			}
 		}
 		
 		if(isset($_POST['name'])){
 			echo "this function works";
 			passReset($con);
+		}else{
+			echo "error1";
 		}
 		
 	?>
