@@ -1,7 +1,7 @@
 
 	<?php
 		//Connection Config
-		include '../Login_Registration/config.php';
+		include '../config.php';
 		
 		$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
 		//$con = new PDO('mysql:host=localhost;dbname=test','root','');
@@ -35,7 +35,7 @@
 					//TODO: give user the link to the password reset page
 					
 						//send user password reset email
-						require '/phpmailer/PHPMailerAutoload.php';
+						require '../phpmailer/PHPMailerAutoload.php';
 
 						$mail = new PHPMailer;
 
