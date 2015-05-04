@@ -10,6 +10,10 @@
     left: 4px;
     top: -2px;
 }
+.dashboardtab{
+    position: relative;
+ top: -10px;   
+}
 #closecreate{
  	width: 18px;
 	height: 18px;
@@ -21,23 +25,29 @@
     cursor: pointer;
 }
 body{
- background-color:beige;
+ background-color: #FFFBF5;
     height: 100vh;
 }
 #htmlpage{
-    background-color: aqua;
+    background-color: #ABFFAE;
     position: relative;
-    top: 32px;
+    top: -8px;
     width: 1300px;
-    height: 100vh;
+    height: 2500px;
 }
 #navbar{
     position: fixed;
-    top: 0px;
-    left: 0px;
     background-color: cornflowerblue;
+    top: 0px;
     height: 40px;
     min-width: 100%;
+    left: 0px;
+}
+#navbarinfo{
+    position: relative;
+    top: -8px;
+    left: 0px;
+    height: 40px;
     z-index: 1;
 }
 #generalsearch{
@@ -50,7 +60,7 @@ body{
 #navprofile{
     position: relative;
     top: 0px;
-    left: 1050px;
+    left: 1200px;
     width: 200px;
     height: 40px;
     background-color:firebrick;
@@ -62,42 +72,19 @@ body{
     top: -40px;
     width: 200px;
     height: 40px;
-    left: 1050px;
-    background-color: darkmagenta;
+    left: 1200px;
+    background-color: #298DFF;
 }
 #logout{
     text-align: center;
     cursor: pointer;
     background-color: darkgoldenrod;
 }
-#dashboardandbrowsetabs{
-    position: absolute;
-    top: 300px;
-    left: 100px;
-    cursor: pointer;
-}
-#dashboardtab{
-    height: 30px;
-    width: 300px;
-    background-color: dimgrey;
-    display: inline;
-    float: left;
-}
-#browsetab{
-    height: 30px;
-    width: 100px;
-    background-color:darkseagreen;
-    display: inline;
-    float: left;
-}
-#dashboardandbrowsebox{
-    position: absolute;
-    top: 330px;
-    left: 100px;
-}
 #dashboard{
     position: absolute;
-    height: 300px;
+    top: 50px;
+    left: 100px;
+    height: 2300px;
     width: 1100px;
     background-color: dimgrey;
 }
@@ -106,14 +93,15 @@ body{
     display: inline;
     float: left;
     background-color:azure;
-    height: 21px;
+    height: 34px;
     width: 99px;
     border-right: solid black 1px;
+    cursor:default;
 }
 #mycoursesbox{
     position: absolute;
-    top: 21px;
-    height: 280px;
+    top: 34px;
+    height: 2280px;
     width: 1100px;
     background-color: white;
 }
@@ -122,15 +110,16 @@ body{
     display: inline;
     float: left;
     background-color:azure;
-    height: 20px;
+    height: 33px;
     width: 99px;
     border-right: solid black 1px;
     border-bottom: solid black 1px;
+    cursor:default;
 }
 #mylikesbox{
     position: absolute;
-    top: 21px;
-    height: 280px;
+    top: 34px;
+    height: 2280px;
     width: 1100px;
     background-color: white;
 }
@@ -139,39 +128,57 @@ body{
     display: inline;
     float: left;
     background-color:azure;
-    height: 20px;
+    height: 33px;
     width: 100px;
     border-bottom: solid black 1px;
+    cursor: default;
 }
 #mysubsbox{
     position: absolute;
-    top: 21px;
-    height: 280px;
+    top: 34px;
+    height: 2280px;
     width: 1100px;
     background-color: white;
 }
-#browse{
+#fillinspace{
+    position: relative;
+    display: inline;
+    float: left;
+    background-color:azure;
+    height: 33px;
+    width: 799px;
+    border-left: solid black 1px;
+}
+
+#hyperlinkbuttons{
     position: absolute;
-    height: 300px;
-    width: 1100px;
-    background-color: darkseagreen;
+    top: 0px;
+    left: 500px;
+}
+#browsebutton{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
 }
 #peertutoring{
-    position: absolute;
-    top: 150px;
-    left:800px;
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
 }
 #create{
     position: relative;
-    top: 150px;
-    left:950px;
     cursor: pointer;
-    width: 200px;
+    display: inline;
+    float: left;
+    padding: 10px;
 }
 #forum{
-    position: absolute;
-    top: 150px;
-    left:1050px; 
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
 }
 #createpopupbox{
     position: relative;
