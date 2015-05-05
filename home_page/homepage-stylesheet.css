@@ -10,9 +10,9 @@
     left: 4px;
     top: -2px;
 }
-.dashboardtab{
+.dashboardtabp{
     position: relative;
- top: -10px;   
+    top: -10px;
 }
 #closecreate{
  	width: 18px;
@@ -25,13 +25,15 @@
     cursor: pointer;
 }
 body{
- background-color: #FFFBF5;
+    background: linear-gradient(#1C1C1C, #006BAD);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
 }
 #htmlpage{
-    background-color: #ABFFAE;
+    background-color: #63DDFF;
     position: relative;
-    top: -8px;
+    top: 32px;
     width: 1300px;
     height: 2500px;
 }
@@ -42,10 +44,11 @@ body{
     height: 40px;
     min-width: 100%;
     left: 0px;
+    z-index: 1;
 }
 #navbarinfo{
-    position: relative;
-    top: -8px;
+    position: fixed;
+    top: 0px;
     left: 0px;
     height: 40px;
     z-index: 1;
@@ -82,7 +85,7 @@ body{
 }
 #dashboard{
     position: absolute;
-    top: 50px;
+    top: 115px;
     left: 100px;
     height: 2300px;
     width: 1100px;
@@ -92,26 +95,32 @@ body{
     position: relative;
     display: inline;
     float: left;
-    background-color:azure;
-    height: 34px;
-    width: 99px;
+    background-color:white;
+    height: 33px;
+    width: 98px;
+    border-top: solid black 1px;
+    border-left: solid black 1px;
     border-right: solid black 1px;
     cursor:default;
 }
 #mycoursesbox{
     position: absolute;
     top: 34px;
-    height: 2280px;
-    width: 1100px;
+    height: 2279px;
+    width: 1098px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
     background-color: white;
 }
 #dashboardyourlikedcontent{
     position: relative;
     display: inline;
     float: left;
-    background-color:azure;
-    height: 33px;
+    background-color:white;
+    height: 32px;
     width: 99px;
+    border-top: solid black 1px;
     border-right: solid black 1px;
     border-bottom: solid black 1px;
     cursor:default;
@@ -119,41 +128,50 @@ body{
 #mylikesbox{
     position: absolute;
     top: 34px;
-    height: 2280px;
-    width: 1100px;
+    height: 2279px;
+    width: 1098px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
     background-color: white;
 }
 #dashboardyoursubs{
     position: relative;
     display: inline;
     float: left;
-    background-color:azure;
-    height: 33px;
+    background-color:white;
+    height: 32px;
     width: 100px;
+    border-top: solid black 1px;
     border-bottom: solid black 1px;
     cursor: default;
 }
 #mysubsbox{
     position: absolute;
     top: 34px;
-    height: 2280px;
-    width: 1100px;
+    height: 2279px;
+    width: 1098px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
     background-color: white;
 }
 #fillinspace{
     position: relative;
     display: inline;
     float: left;
-    background-color:azure;
-    height: 33px;
-    width: 799px;
-    border-left: solid black 1px;
+    background-color:white;
+    height: 32px;
+    width: 798px;
+    border: solid black 1px;
+
 }
 
 #hyperlinkbuttons{
     position: absolute;
     top: 0px;
     left: 500px;
+    width: 360px;
 }
 #browsebutton{
     position: relative;

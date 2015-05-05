@@ -16,20 +16,19 @@ $(document).ready(function() {
         $("#htmlpage").fadeTo(500,0.5);
         $("#navbar").fadeTo(500,0.5);
         $("#navbarinfo").fadeTo(500,0.5);
-        $("#htmlpage").css("top","-208px");
-        $("#navbarinfo").css("top","-208px");
+        $("#htmlpage").css("top","-168px");
         $("#createpopupbox").fadeIn();
         $("#htmlpage").css("z-index","-1");
         $("#navbar").css("z-index","-1");
         $("#navbarinfo").css("z-index","-1");
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
     });
     $("#closecreate").on("click",function(){
         $("#htmlpage").fadeTo(500,1);
         $("#navbar").fadeTo(500,1);
         $("#navbarinfo").fadeTo(500,1);
         $("#createpopupbox").fadeOut(function(){
-            $("#htmlpage").css("top","-8px");
-            $("#navbarinfo").css("top","-8px");
+            $("#htmlpage").css("top","32px");
             $("#htmlpage").css("z-index","0");
             $("#navbar").css("z-index","1");
             $("#navbarinfo").css("z-index","1");
@@ -55,29 +54,29 @@ $(document).ready(function() {
         $("#mycoursesbox").show();
         $("#mylikesbox").hide();
         $("#mysubsbox").hide();
-        $("#dashboardyourcourses").on("click",function(){
-            $("#dashboardyourcourses").css({"height":"34px","border-bottom":"none"});
-            $("#dashboardyourlikedcontent").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#dashboardyoursubs").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#mycoursesbox").show();
+    
+
+        $(".dashboardtab").on("click",function(event){
+            $("#dashboardyourcourses").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyourlikedcontent").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyoursubs").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#mycoursesbox").hide();
             $("#mylikesbox").hide();
             $("#mysubsbox").hide();
         });
+
+    
+        $("#dashboardyourcourses").on("click",function(){
+            $("#dashboardyourcourses").css({"height":"33px","border-bottom":"none"});
+            $("#mycoursesbox").show();
+        });
         $("#dashboardyourlikedcontent").on("click",function(){
-            $("#dashboardyourlikedcontent").css({"height":"34px","border-bottom":"none"});
-            $("#dashboardyoursubs").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#dashboardyourcourses").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#mycoursesbox").hide();
+            $("#dashboardyourlikedcontent").css({"height":"33px","border-bottom":"none"});
             $("#mylikesbox").show();
-            $("#mysubsbox").hide();
 
         });
         $("#dashboardyoursubs").on("click",function(){
-            $("#dashboardyoursubs").css({"height":"34px","border-bottom":"none"});
-            $("#dashboardyourcourses").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#dashboardyourlikedcontent").css({"height":"33px","border-bottom":"solid black 1px"});
-            $("#mycoursesbox").hide();
-            $("#mylikesbox").hide();
+            $("#dashboardyoursubs").css({"height":"33px","border-bottom":"none"});
             $("#mysubsbox").show();
         });
     });
