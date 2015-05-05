@@ -17,30 +17,25 @@
 		</div>
 			<?php
 				//Connection Config
-				define('DB_HOST','localhost'); 
-				define('DB_NAME','test'); //name of database
-				define('DB_USER','root'); //mysql user
-				define('DB_PASSWORD',''); //mysql password
-				$con = new PDO('mysql:host=localhost;dbname=test','root','');
+				include '../config.php';
+		
+				$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
 				//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 				
 				function verify($con){
-					if(isset($_POST['user']) && isset($_POST['code'])){
+					if(!empty($_POST['user']) && !empty($_POST['code'])){
 						$key = $_POST['code'];
-						$query = $con->prepare("SELECT * FROM UserName WHERE userName = :user");
+						$query = $con->prepare("SELECT * FROM accounts WHERE username = :user");
 						$query->bindParam(':user',$username);
 						$username = $_POST['user'];
 						$query->execute();
 						$result = $query->fetch(PDO::FETCH_ASSOC);
 						
 						if(!empty($result)){
-							echo "First if";
-							echo $result['userName'];
 							//echo $key;
 							if($result['resetkey'] == $key){ 
-								echo "Second if";
 								//redirect user to password Reset page
-								header("Location: /passreset.php");
+								header("Location: passreset.php");
 							}else{
 								echo "No such code exists. Please try again";
 							}

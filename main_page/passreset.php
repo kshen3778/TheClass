@@ -19,34 +19,32 @@
 		</div>
 	<?php
 		//Connection Config
-		define('DB_HOST','localhost'); 
-		define('DB_NAME','test'); //name of database
-		define('DB_USER','root'); //mysql user
-		define('DB_PASSWORD',''); //mysql password
-		$con = new PDO('mysql:host=localhost;dbname=test','root','');
+		include '../config.php';
+		
+		$con = new PDO('mysql:host='. DB_HOST .';dbname='. DB_NAME .'', DB_USER,DB_PASSWORD);
 		//$con2 = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		
 		function passReset( $con){
-			if(isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['confpass']) && isset($_POST['code'])){
+			if(!empty($_POST['user']) && !empty($_POST['pass']) && !empty($_POST['confpass']) && !empty($_POST['code'])){
 				$user = $_POST['user'];
 				$pass = $_POST['pass'];
 				$confpass = $_POST['confpass'];
 				$key = $_POST['code'];
 				
 				//purge expired reset keys
-				$purge = $con->prepare("UPDATE UserName SET resetkey = NULL WHERE expire < NOW()");
+				$purge = $con->prepare("UPDATE accounts SET resetkey = NULL WHERE expire < NOW()");
 				$purge->execute();
 				
 				if($pass == $confpass){
 					//$dbunames = mysqli_query($con,"SELECT * FROM UserName WHERE userName='$user'");
-					$query = $con->prepare("SELECT * FROM UserName WHERE userName = :user");
+					$query = $con->prepare("SELECT * FROM accounts WHERE username = :user");
 					$query->bindParam(':user',$user);
 					$query->execute();
 					$result = $query->fetch(PDO::FETCH_ASSOC);
 					
 					if(!empty($result)){
 						//set reset key to null
-						$query2 = $con->prepare("UPDATE UserName SET resetkey = NULL WHERE userName = :user");
+						$query2 = $con->prepare("UPDATE accounts SET resetkey = NULL WHERE username = :user");
 						$query2->bindParam(':user',$user);
 						$query2->execute();
 						if($result['resetkey'] == $key){ //check if token is correct
@@ -59,7 +57,7 @@
 								$hpassword = password_hash($pass, PASSWORD_DEFAULT);
 								
 								//Prepared statements for SQL injection prevention
-								$query3 = $con->prepare("UPDATE UserName SET pass = :hpassword WHERE userName = :user");
+								$query3 = $con->prepare("UPDATE accounts SET password = :hpassword WHERE username = :user");
 									
 								//bind parameters
 								$query3->bindParam(':user', $user);
