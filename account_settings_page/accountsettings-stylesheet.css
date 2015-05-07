@@ -4,6 +4,12 @@
 .center{
     margin: 0 auto;
 }
+.xbutton{
+    color: white;
+    position: relative;
+    left: 4px;
+    top: -2px;
+}
 .write{
      position: relative;
     top: 30px;
@@ -28,20 +34,45 @@
  background-color: bisque;
     padding-left: 20px;
 }
-#page{
-    background-color: aqua;
-    position: relative;
-    top: 32px;
-    width: 1300px;
+#closecreate{
+ 	width: 18px;
+	height: 18px;
+	background: #005B80;
+	border-radius:9px;
+	position: relative;
+	top: 10px;
+	left: 360px;
+    cursor: pointer;
+}
+body{
+    background: linear-gradient(#363636, #006BAD);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
 }
+#htmlpage{
+    background: linear-gradient(#DBDBDB, #DEDEDE);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    top: -8px;
+    width: 1300px;
+    height: 1500px;
+}
 #navbar{
-    position: fixed;
+    position:absolute;
+    background-color: #35B7DB;
     top: 0px;
-    left: 0px;
-    background-color: cornflowerblue;
     height: 40px;
     min-width: 100%;
+    left: 0px;
+    z-index: 1;
+}
+#navbarinfo{
+    position: relative;
+    top: -8px;
+    left: 0px;
+    height: 40px;
     z-index: 1;
 }
 #generalsearch{
@@ -54,28 +85,83 @@
 #navprofile{
     position: relative;
     top: 0px;
-    left: 1050px;
+    left: 1200px;
     width: 200px;
     height: 40px;
-    background-color:firebrick;
+    background-color: #00A32C;
     cursor: pointer;
     z-index: 1;
+}
+#navprofile:hover{
+    background-color: #308014;
 }
 #profilesettingcon{
     position: relative;
     top: -40px;
     width: 200px;
     height: 40px;
-    left: 1050px;
-    background-color: darkmagenta;
+    left: 1200px;
+    background-color: #00D2F2;
+}
+#accountsettings{
+    text-align: center;
+    cursor: pointer;
 }
 #logout{
     text-align: center;
     cursor: pointer;
-    background-color: darkgoldenrod;
+}
+#hyperlinkbuttons{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 360px;
+}
+#browsebutton{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#peertutoring{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#create{
+    position: relative;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#forum{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#createpopupbox{
+    position: relative;
+    top: 200px;
+    height: 200px;
+    width: 400px;
+    background-color: red;
+    z-index: 20;
+}
+#resourcelessoncreate{
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+#coursecreate{
+    position: relative;
+    top: 75px;
+    text-align: center;
 }
 #topbar{
- background-color:darkslateblue;
+ background-color: #005B80;
     height: 200px;
     width: 1300px;
 }
@@ -131,50 +217,67 @@
  position: relative;
     top: 80px;
 }
-#youractivity{
+#featuredlessonsandcourses{
     position: relative;
-    top: -750px;
+    top: -800px;
     left: 450px;
-    height: 400px;
-    width: 700px;
+    height: 500px;
+    width: 800px;
     background-color: darkorange;
 }
-#activitytabs{
-    position: absolute;
-    top: 20px;
+#youruploads{
+ position: absolute;
+    top: 900px;
     left: 50px;
-}
-#activitycontenttab{
-    position: relative;
-    height: 35px;
-    width: 150px;
-    background-color:darkseagreen;
-    display: inline;
-    float: left;
-    text-align: center;
-}
-#activitypeertuttab{
-    position: relative;
-    height: 35px;
-    width: 150px;
-    background-color:forestgreen;
-    display: inline;
-    float: left;
-    text-align: center;
-}
-#youruploadedcontent{
-    position: absolute;
-    top: 55px;
-    left: 50px;
+    width: 1200px;
     height: 200px;
-    width: 400px;
-    background-color:darkseagreen;
+    background-color: aqua;
 }
-#yourpeertutoringsessions{
+#youractivity{
     position: absolute;
-    top: 55px;
+    top: 1150px;
     left: 50px;
+    width: 1200px;
     height: 200px;
-    width: 400px;
-    background-color:forestgreen;
+    background-color: aqua;
+}
+#addachapter{
+    position: absolute;
+    top: 1400px;
+    left: 50px;
+    width: 1200px;
+    height: 50px;
+    background-color: aqua;
+}
+#addchapterp{
+ position: absolute;
+    left: 200px;
+    top: 13px;
+}
+#addchaptercircle{
+    position: absolute;
+    width: 30px;
+	height: 30px;
+    left: 50px;
+    top: 10px;
+	background: #005B80;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+}
+#addchapterplusone{
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 5px;
+    height: 20px;
+    background-color: lightgrey;
+}
+#addchapterplustwo{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 5px;
+    background-color: lightgrey;
 }

@@ -22,7 +22,7 @@ $(document).ready(function() {
         $("#htmlpage").css("z-index","-1");
         $("#navbar").css("z-index","-1");
         $("#navbarinfo").css("z-index","-1");
-        $('html, body').animate({ scrollTop: 0 }, 'fast');
+        //$('html, body').animate({ scrollTop: 0 }, 'fast');
     });
     $("#closecreate").on("click",function(){
         $("#htmlpage").fadeTo(500,1);

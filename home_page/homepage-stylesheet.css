@@ -40,7 +40,7 @@ body{
     height: 2100px;
 }
 #navbar{
-    position: absolute;
+    position:absolute;
     background-color: #35B7DB;
     top: 0px;
     height: 40px;
@@ -90,6 +90,55 @@ body{
 #logout{
     text-align: center;
     cursor: pointer;
+}
+#hyperlinkbuttons{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 360px;
+}
+#browsebutton{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#peertutoring{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#create{
+    position: relative;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#forum{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#createpopupbox{
+    position: relative;
+    top: 200px;
+    height: 200px;
+    width: 400px;
+    background-color: red;
+    z-index: 20;
+}
+#resourcelessoncreate{
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+#coursecreate{
+    position: relative;
+    top: 75px;
+    text-align: center;
 }
 #dashboard{
     position: absolute;
@@ -194,58 +243,4 @@ body{
     height: 32px;
     width: 699px;
     border: solid black 1px;
-}
-
-#hyperlinkbuttons{
-    position: absolute;
-    top: 0px;
-    left: 500px;
-    width: 360px;
-}
-#browsebutton{
-    position: relative;
-    display: inline;
-    float: left;
-    padding: 10px;
-}
-#peertutoring{
-    position: relative;
-    display: inline;
-    float: left;
-    padding: 10px;
-}
-#create{
-    position: relative;
-    cursor: pointer;
-    display: inline;
-    float: left;
-    padding: 10px;
-}
-#forum{
-    position: relative;
-    display: inline;
-    float: left;
-    padding: 10px;
-}
-#createpopupbox{
-    position: relative;
-    top: 200px;
-    height: 200px;
-    width: 400px;
-    background-color: red;
-    z-index: 20;
-}
-#resourcelessoncreate{
-    position: relative;
-    text-align: center;
-}
-#resourcelessoncreate{
-    position: relative;
-    top: 40px;
-    text-align: center;
-}
-#coursecreate{
-    position: relative;
-    top: 75px;
-    text-align: center;
 }
