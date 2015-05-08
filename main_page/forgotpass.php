@@ -61,7 +61,7 @@
 						//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 						$mail->isHTML(true);                                  // Set email format to HTML
 
-						$mail->Subject = 'Here is the subject';
+						$mail->Subject = 'TheClass Password Reset';
 						$mail->Body    = "Your reset key is: " . $token;
 						$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -78,8 +78,6 @@
 		if(isset($_POST['name'])){
 			echo "this function works";
 			passReset($con);
-		}else{
-			echo "error1";
 		}
 		
 	?>

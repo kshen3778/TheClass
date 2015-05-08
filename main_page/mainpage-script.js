@@ -17,15 +17,19 @@ $(document).ready(function() {
 	//forgot password
 	$("#forgotpass").on('click', function(){
 		var username = document.getElementById('username').value;
-		console.log("forgotpass function is running");
-		$.ajax({
-		   type: "POST",
-		   url: 'forgotpass.php',
-		   data: { name: username},
-		   success: function(data){
-				console.log(data);
-		   }
-		});
+		if(document.forms['form']['username'].value != ""){
+			console.log("forgotpass function is running");
+			$.ajax({
+			   type: "POST",
+			   url: 'forgotpass.php',
+			   data: { name: username},
+			   success: function(data){
+					console.log(data);
+			   }
+			});
+		}else{
+			alert("Enter username first");
+		}
     })
 	
 	
