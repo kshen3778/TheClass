@@ -30,7 +30,7 @@ $(document).ready(function() {
         $("#navbarinfo").fadeTo(500,1);
         $("#createpopupbox").fadeOut(function(){
             $("#htmlpage").css("top","-8px");
-            $("#navbarinfo").css("top","-8px")
+            $("#navbarinfo").css("top","-8px");
             $("#htmlpage").css("z-index","0");
             $("#navbar").css("z-index","1");
             $("#navbarinfo").css("z-index","1");

@@ -30,13 +30,41 @@ $(document).ready(function(){
         $("#navbarinfo").fadeTo(500,1);
         $("#createpopupbox").fadeOut(function(){
             $("#htmlpage").css("top","-8px");
-            $("#navbarinfo").css("top","-8px")
+            $("#navbarinfo").css("top","-8px");
             $("#htmlpage").css("z-index","0");
             $("#navbar").css("z-index","1");
             $("#navbarinfo").css("z-index","1");
         });
     });
     //end of navbar js
+    //open animation
+    $("#profile").hide();
+    $("#personalinfo").hide();
+    $("#yourstats").hide();
+    $("#featuredlessonsandcourses").hide();
+    $("#profile").fadeIn(600);
+    $("#personalinfo").fadeIn(1300);
+    $("#featuredlessonsandcourses").fadeIn(1000);
+    $("#yourstats").fadeIn(1000);
+    $("#yourstats").animate({top: "90px"}, { duration: 1000, queue: false });
+    $('#youruploads').hide();
+    $("#youractivity").hide();
+    $("#addachapter").hide();
+    $(window).scroll(function() {
+    var height = $(window).scrollTop();
+
+    if(height  > 300) {
+        $("#youruploads").animate({top: "900px"}, { duration: 300, queue: false });
+        $('#youruploads').fadeIn(300,function(){
+            $("#youractivity").animate({top: "1150px"}, { duration: 300, queue: false });
+            $('#youractivity').fadeIn(300,function(){
+                $("#addachapter").animate({top: "1400px"}, { duration: 300, queue: false });
+                $('#addachapter').fadeIn(300);
+            });
+        });
+    }
+});
+    //end of open animation
     //edit personal info
     $(".write").hide();
     var hideeditbuttons = function(){
