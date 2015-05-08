@@ -51,9 +51,8 @@ body{
     height: 100vh;
 }
 #htmlpage{
-    background: linear-gradient(#DBDBDB, #DEDEDE);
+    background: linear-gradient(#9E9E9E 1%, #DEDEDE 99%);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
     top: -8px;
     width: 1300px;
@@ -171,12 +170,19 @@ body{
     top: -330px;
     height: 200px;
     width: 700px;
-    background-color: antiquewhite;
+    background-color: #0A6CA8;
 }
 #statistics{
     top: 20px;
     text-align: center;
     font-size: 17px;
+}
+#milestoneawards{
+ position: absolute;
+    top: 160px;
+    width: 700px;
+    height: 40px;
+    background-color: #FFBC4F;
 }
 #personalinfo{
     position: relative;
@@ -184,7 +190,7 @@ body{
     left: 50px;
     height: 500px;
     width: 300px;
-    background-color: antiquewhite
+    background-color: #FCCC72;
 }
 #savechanges{
     position: absolute;
@@ -200,7 +206,8 @@ body{
  position: relative;
     height: 200px;
     width: 350px;
-    background-color: darkcyan;
+    background-color: #0B7ABF;
+    border: solid white 1px;
     top: -113px;
     left: 50px;
 }
@@ -223,7 +230,8 @@ body{
     left: 450px;
     height: 500px;
     width: 800px;
-    background-color: darkorange;
+    background-color: white;
+    border: solid black 1px;
 }
 #youruploads{
  position: absolute;
@@ -231,7 +239,8 @@ body{
     left: 50px;
     width: 1200px;
     height: 200px;
-    background-color: aqua;
+    background-color: white;
+    border: solid black 1px;
 }
 #youractivity{
     position: absolute;
@@ -239,7 +248,8 @@ body{
     left: 50px;
     width: 1200px;
     height: 200px;
-    background-color: aqua;
+    background-color: white;
+    border: solid black 1px;
 }
 #addachapter{
     position: absolute;
@@ -247,7 +257,8 @@ body{
     left: 50px;
     width: 1200px;
     height: 50px;
-    background-color: aqua;
+    background-color: white;
+    border: solid black 1px;
 }
 #addchapterp{
  position: absolute;

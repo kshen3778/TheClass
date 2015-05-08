@@ -52,6 +52,7 @@ session_start();
             <p id="membersince">Member since</p>
             <p id="membersince">Content Liked:</p><!--500pgs-->
             <p id="membersince">Content Downloaded:</p>
+            <div id="milestoneawards"></div>
         </div>
         <div id="personalinfo">
             <!-- get rid of backgorund color-->
