@@ -33,7 +33,7 @@ session_start();
         
             <div id="navprofile"></div>
                 <div id="profilesettingcon">
-                    <div id="accountsettings">account settings</div>
+                    <div id="accountsettings">about you</div>
                     <div id="logout">logout</div>
                 </div>
     </div>

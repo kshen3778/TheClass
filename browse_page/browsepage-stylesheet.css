@@ -10,10 +10,6 @@
     left: 4px;
     top: -2px;
 }
-.dashboardtabp{
-    position: relative;
-    top: -10px;
-}
 #closecreate{
  	width: 18px;
 	height: 18px;
@@ -142,107 +138,14 @@ body{
     top: 75px;
     text-align: center;
 }
-#dashboard{
+#topbar{
+    background-color: #005B80;
+    height: 80px;
+    width: 1300px;   
+}
+#topbarp{
     position: absolute;
-    top: 150px;
     left: 100px;
-    height: 1914px;
-    width: 1100px;
-    background-color: dimgrey;
-}
-#dashboardyourcourses{
-    position: relative;
-    display: inline;
-    float: left;
-    background-color:white;
-    height: 33px;
-    width: 98px;
-    border-top: solid black 1px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    cursor:default;
-}
-#mycoursesbox{
-    position: absolute;
-    top: 34px;
-    height: 1879px;
-    width: 1098px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    background-color: white;
-}
-#dashboardyourlikedcontent{
-    position: relative;
-    display: inline;
-    float: left;
-    background-color:white;
-    height: 32px;
-    width: 99px;
-    border-top: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    cursor:default;
-}
-#mylikesbox{
-    position: absolute;
-    top: 34px;
-    height: 1879px;
-    width: 1098px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    background-color: white;
-}
-#dashboardyoursubs{
-    position: relative;
-    display: inline;
-    float: left;
-    background-color:white;
-    height: 32px;
-    width: 99px;
-    border-top: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    cursor: default;
-}
-#mysubsbox{
-    position: absolute;
-    top: 34px;
-    height: 1879px;
-    width: 1098px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    background-color: white;
-}
-#dashboardtutoringsessions{
-    position: relative;
-    display: inline;
-    float: left;
-    background-color:white;
-    height: 32px;
-    width: 99px;
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
-    cursor: default;
-}
-#mytutoringsessionsbox{
-    position: absolute;
-    top: 34px;
-    height: 1879px;
-    width: 1098px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
-    background-color: white;
-}
-#fillinspace{
-    position: relative;
-    display: inline;
-    float: left;
-    background-color:white;
-    height: 32px;
-    width: 699px;
-    border: solid black 1px;
+    top: 25px;
+    color: white;
 }

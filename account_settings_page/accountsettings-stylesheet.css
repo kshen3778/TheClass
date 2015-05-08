@@ -59,7 +59,7 @@ body{
     height: 1500px;
 }
 #navbar{
-    position:absolute;
+    position: absolute;
     background-color: #35B7DB;
     top: 0px;
     height: 40px;
@@ -100,7 +100,8 @@ body{
     width: 200px;
     height: 40px;
     left: 1200px;
-    background-color: #00D2F2;
+    background-color: #0880A8;
+    color:bisque;
 }
 #accountsettings{
     text-align: center;
@@ -115,6 +116,7 @@ body{
     top: 0px;
     left: 500px;
     width: 360px;
+    color: white;
 }
 #browsebutton{
     position: relative;

@@ -52,8 +52,11 @@ $(document).ready(function() {
     $("#dashboardtutoringsessions").fadeIn(900);
     $("#fillinspace").fadeIn(1000);  
     $("#dashboardmystuff").fadeIn(500);
+    $("#dashboard").hide();
+        $("#dashboard").fadeIn(500);
+    $("#dashboard").animate({top: "110px"}, { duration: 500, queue: false });
     
-    
+    //end of fadein
     
     
         $("#mycoursesbox").show();
