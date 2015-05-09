@@ -34,7 +34,7 @@ session_start();
         
             <div id="navprofile"></div>
                 <div id="profilesettingcon">
-                    <div id="accountsettings">about you</div>
+                    <div id="accountsettings" onclick="location.href = '../home_page/homepage-index.php';">Home</div>
                     <div id="logout">logout</div>
                 </div>
     </div>

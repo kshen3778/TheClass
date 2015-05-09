@@ -34,8 +34,8 @@ session_start();
         
             <div id="navprofile"><?php echo $_SESSION['username'];?></div>
                 <div id="profilesettingcon">
-                    <div id="accountsettings">about you</div>
-                    <div id="logout">logout</div>
+                    <div id="accountsettings" onclick="location.href = '../account_settings_page/accountsettings-index.php';">profile</div>
+                    <div id="logout" onclick="location.href = '../Login_Registration/logout.php';">logout</div>
                 </div>
     </div>
     <div id="htmlpage" class="center">
