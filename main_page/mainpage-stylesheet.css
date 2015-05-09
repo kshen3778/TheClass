@@ -227,7 +227,7 @@ color: white;
     width: 165px; 
 }
 #regaccount{
-    height: 30px;
+    height: 40px;
 	width: 362px;
 	border: 2px solid #006BAD;
 	background-color: #00A32C;
@@ -237,6 +237,7 @@ color: white;
 	cursor: pointer;
 	outline-color: #006BAD;
     text-align: center;
+    padding-bottom: 15px;
     padding-top: 10px;
     color: white;
 }

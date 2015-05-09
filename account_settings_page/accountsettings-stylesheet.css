@@ -115,10 +115,16 @@ body{
     position: absolute;
     top: 0px;
     left: 500px;
-    width: 360px;
+    width: 470px;
     color: white;
 }
 #browsebutton{
+    position: relative;
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+#homepagelink{
     position: relative;
     display: inline;
     float: left;
