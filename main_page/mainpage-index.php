@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<link rel="stylesheet" type="text/css" href="mainpage-stylesheet.css"/>
@@ -21,6 +24,12 @@
         <input id="username" name="username" class="loginform" type="text" style="color: white;" placeholder="Username">
         <input id="password" name="password" class="loginform" type="password" style="color: white;" placeholder="Password">
         <input id="SigninButton" style="color: #ffffff" type="submit" name="signin" value="Log-in">
+		<?php
+		if(isset($_SESSION['error'])){
+			echo $_SESSION['error'];
+			unset($_SESSION['error']);
+		}
+		?>
 		</form>
     <div id="remember-background">
    

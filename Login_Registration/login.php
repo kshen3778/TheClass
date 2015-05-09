@@ -30,16 +30,19 @@ function SignIn($con){
 			
 			echo "Successfully logged in.";
 			header("Location: ../home_page/homepage-index.php");
-			//TODO: direct user to main page
+			
 		}
 		else { 
+			$_SESSION['error'] = "Invalid username or password.";
 			echo "Invalid username or password";
-			//header("Location: /sign-in.html");
-			//TODO: display error message
+			header("Location: ../main_page/mainpage-index.php");
+			
 		}
 	}
 	else{
 		echo "INVALID LOGIN";
+		$_SESSION['error'] = "Please enter your username and password.";
+		header("Location: ../main_page/mainpage-index.php");
 		
 	}
 }

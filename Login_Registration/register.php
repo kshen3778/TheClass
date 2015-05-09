@@ -1,5 +1,6 @@
 
 		<?php
+			session_start();
 			//Connection Config
 			include '../config.php';
 
@@ -64,12 +65,16 @@
 							//Query successful
 							echo "User has been created successfully";
 							//direct user to another page
+							header("Location: ../home_page/homepage-index.php");
 						}else{
-							echo "Error1";
+							$_SESSION['error'] = "Error creating user. Please try again.";
+							header("Location: ../main_page/mainpage-index.php");
 						}
 					}
 				}else{
 					echo "Please fill out the information";
+					$_SESSION['error'] = "Please fill out the information";
+					header("Location: ../main_page/mainpage-index.php");
 				}
 			}
 			
