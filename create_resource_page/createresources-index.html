@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
-	<link rel="stylesheet" type="text/css" href="browsepage-stylesheet.css"/>
+	<link rel="stylesheet" type="text/css" href="createresources-stylesheet.css"/>
     	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type='text/javascript' src='browsepage-script.js'></script>
+	<script type='text/javascript' src='createresources-script.js'></script>
     
 		<head>
 		<title>test</title>
@@ -34,10 +34,14 @@
                     <div id="logout">logout</div>
                 </div>
     </div>
-    <div id="htmlpage" class="center">
-        <div id="topbar">
-            <div id="topbarp">results for:</div>
+    <div id="htmlpage" class="center">  
+        <input id="title" type="text" placeholder="title">
+        <input id="takeaway" type="text" placeholder="takeaway">
+<textarea id="gendescription" maxlength="200" placeholder="general description of lesson (optional)"></textarea>
+        <div class="resourcecontainer">
+            <div class="uploadresource"></div>
         </div>
+        
     </div>
 </body>
 </html>
