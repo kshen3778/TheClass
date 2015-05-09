@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<link rel="stylesheet" type="text/css" href="homepage-stylesheet.css"/>
@@ -29,7 +32,7 @@
         </div>
         
         
-            <div id="navprofile"></div>
+            <div id="navprofile"><?php echo $_SESSION['username'];?></div>
                 <div id="profilesettingcon">
                     <div id="accountsettings">about you</div>
                     <div id="logout">logout</div>

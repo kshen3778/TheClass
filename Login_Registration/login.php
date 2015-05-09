@@ -29,7 +29,7 @@ function SignIn($con){
 			$_SESSION['lastname'] = $data['lastname'];
 			
 			echo "Successfully logged in.";
-			header("Location: ../account_settings_page/accountsettings-index.php");
+			header("Location: ../home_page/homepage-index.php");
 			//TODO: direct user to main page
 		}
 		else { 
