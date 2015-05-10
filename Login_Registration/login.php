@@ -35,7 +35,7 @@ function SignIn($con){
 		else { 
 			$_SESSION['error'] = "Invalid username or password.";
 			//echo "Invalid username or password";
-			header("Location: ../main_page/mainpage-index.php");
+			header("Location: ../main_page/mainpage-incorrect-index.php");
 			
 		}
 	}
