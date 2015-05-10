@@ -64,6 +64,17 @@
 						if($query->execute()){
 							//Query successful
 							echo "User has been created successfully";
+							//create folder for user
+							$dir = "../Users/" . $username;
+							if(is_dir($dir) == false){
+								mkdir($dir);
+							}
+							$_SESSION['username'] = $username;
+							$_SESSION['password'] = $password;
+							$_SESSION['email'] = $email;
+							$_SESSION['firstname'] = $firstname;
+							$_SESSION['lastname'] = $lastname;
+			
 							//direct user to another page
 							header("Location: ../home_page/homepage-index.php");
 						}else{
