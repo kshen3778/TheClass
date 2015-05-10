@@ -31,7 +31,12 @@ $(document).ready(function() {
 			alert("Enter username first");
 		}
     })
-	
+	$('#regaccount').on("click",function(){
+        if($('#regemail').length()>0 && $('#regusername').length()>0 && $('#regpassword').length()>0 && $('#regpasswordcon').length()>0 && $('#regfirstname').length()>0 && $('#reglastname').length()>0){
+         alert("hi");   
+        }
+        
+    });
 	
     
     $("#openlogin").on("click",function(){
