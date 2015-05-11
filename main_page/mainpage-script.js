@@ -32,9 +32,33 @@ $(document).ready(function() {
 		}
     })
 	$('#regaccount').on("click",function(){
-        if($('#regemail').length()>0 && $('#regusername').length()>0 && $('#regpassword').length()>0 && $('#regpasswordcon').length()>0 && $('#regfirstname').length()>0 && $('#reglastname').length()>0){
-         alert("hi");   
-        }
+        
+			console.log("registration function is running");
+			var username = document.getElementById('regusername').value;
+			var password = document.getElementById('regpassword').value;
+			var passwordcon = document.getElementById('regpasswordcon').value;
+			var email = document.getElementById('regemail').value;
+			var fname = document.getElementById('regfirstname').value;
+			var lname = document.getElementById('reglastname').value;
+			if(document.forms['form2']['regusername'].value != "" && document.forms['form2']['regpassword'].value != "" && document.forms['form2']['regpasswordcon'].value != "" && document.forms['form2']['regemail'].value != "" && document.forms['form2']['regfirstname'].value != "" && document.forms['form2']['reglastname'].value != ""){
+				if(password == passwordcon){
+					console.log("password verified");
+					$.ajax({
+					   type: "POST",
+					   url: 'register.php',
+					   data: { regusername: username, regpassword: password, regemail: email, regfirstname: fname, reglastname: lname },
+					   success: function(data){
+							console.log(data);
+					   }
+					});
+				}else{
+					alert("Passwords dont match try again");
+				}
+			}else{
+				alert("Please fill in the information")
+			}
+		
+        
         
     });
 	

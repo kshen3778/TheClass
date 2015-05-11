@@ -9,7 +9,7 @@
 			//Registration
 			
 			function Register($con){
-				if(!empty($_POST['regusername']) && !empty($_POST['regpassword']) && !empty($_POST['regpasswordcon']) && !empty($_POST['regemail']) && !empty($_POST['regfirstname']) && !empty($_POST['reglastname'])){
+				
 					$username = $_POST['regusername'];
 					$email = $_POST['regemail'];
 					$password = $_POST['regpassword'];
@@ -24,17 +24,6 @@
 						exit;
 					}
 					
-					//check for password length
-					if(strlen($password) < 6){
-						echo "Password should be longer than 5 characters";
-						exit;
-					}
-					
-					//confirm password(check if two pass are the same)
-					if(!($password == $cpassword)){
-						echo "The passwords are not the same. Please reconfirm your password.";
-						exit;
-					}
 					
 					//check if username is taken
 					$check = $con->prepare("SELECT * FROM accounts WHERE username=:user");
@@ -78,18 +67,16 @@
 							//direct user to another page
 							header("Location: ../home_page/homepage-index.php");
 						}else{
+							echo "Error creating the user";
 							$_SESSION['error'] = "Error creating user. Please try again.";
 							header("Location: ../main_page/mainpage-index.php");
 						}
 					}
-				}else{
-					echo "Please fill out the information";
-					$_SESSION['error'] = "Please fill out the information";
-					header("Location: ../main_page/mainpage-index.php");
 				}
-			}
 			
-			if(isset($_POST['regaccount'])){
+			
+			if(isset($_POST['regusername'])){
+				echo "Registration php is running";
 				Register($con);
 			}
 	?>
