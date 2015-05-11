@@ -13,6 +13,8 @@
 .resourcecontainer{
     position: relative;
     margin-top: 50px;
+    width: 800px;
+    left: 250px;
 }
 .uploadresource{
     position: relative;
@@ -20,7 +22,53 @@
     height: 200px;
     width: 800px;
     background-color: white;
-    left: 250px;
+}
+.resourcedescription{
+    position: relative;
+    top: 50px;
+    height: 200px;
+    width: 800px;
+    background-color:chocolate;
+    resize: none;
+    overflow: auto;
+    
+}
+.createordeleteresourcecon{
+    position: relative;
+    top: 46px;
+    height: 40px;
+    width: 100px;
+    background-color: black;
+}
+.addcircle{
+    position: relative;
+    width: 30px;
+	height: 30px;
+    left: 60px;
+    top: 5px;
+	background: #00A32C;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+}
+.addcircle:hover{
+    background-color: #308014;
+}
+.addcircleplusone{
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 5px;
+    height: 20px;
+    background-color: white;
+}
+.addcircleplustwo{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 5px;
+    background-color: white;
 }
 #closecreate{
  	width: 18px;
