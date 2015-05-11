@@ -10,6 +10,9 @@
 		   }
 		});
 }*/
+function isValid(str){ //check a string for special characters
+ return !/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);
+}
 $(document).ready(function() {
     $("#logintab").hide();
     $("#registrationtab").hide();
@@ -41,18 +44,22 @@ $(document).ready(function() {
 			var fname = document.getElementById('regfirstname').value;
 			var lname = document.getElementById('reglastname').value;
 			if(document.forms['form2']['regusername'].value != "" && document.forms['form2']['regpassword'].value != "" && document.forms['form2']['regpasswordcon'].value != "" && document.forms['form2']['regemail'].value != "" && document.forms['form2']['regfirstname'].value != "" && document.forms['form2']['reglastname'].value != ""){
-				if(password == passwordcon){
-					console.log("password verified");
-					$.ajax({
-					   type: "POST",
-					   url: 'register.php',
-					   data: { regusername: username, regpassword: password, regemail: email, regfirstname: fname, reglastname: lname },
-					   success: function(data){
-							console.log(data);
-					   }
-					});
+				if(isValid(username)){
+					if(password == passwordcon){
+						console.log("password verified");
+						$.ajax({
+						   type: "POST",
+						   url: 'register.php',
+						   data: { regusername: username, regpassword: password, regemail: email, regfirstname: fname, reglastname: lname },
+						   success: function(data){
+								console.log(data);
+						   }
+						});
+					}else{
+						alert("Passwords dont match try again");
+					}
 				}else{
-					alert("Passwords dont match try again");
+					alert("Your username shouldn't contain special characters");
 				}
 			}else{
 				alert("Please fill in the information")
