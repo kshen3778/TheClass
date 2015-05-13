@@ -1,5 +1,6 @@
 var toggleshowprofile = false;
 $(document).ready(function() {
+
 //navbar js
     $("#navprofile").on("click",function(){
         if(toggleshowprofile==true){

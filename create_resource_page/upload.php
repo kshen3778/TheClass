@@ -1,43 +1,24 @@
 <?php
-$target_dir = "../Users/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
+if (isset($_POST['submit'])) {
+	$j = 0;     // Variable for indexing uploaded image.
+	$target_path = "../Users/";     // Declaring Path for uploaded images. TODO: put into individual user folder
+	for ($i = 0; $i < count($_FILES['file']['name']); $i++) {
+		// Loop to get individual element from the array
+		$validextensions = array("jpeg", "jpg", "png");      // Extensions which are allowed.
+		$ext = explode('.', basename($_FILES['file']['name'][$i]));   // Explode file name from dot(.)
+		$file_extension = end($ext); // Store extensions in the variable.
+		$target_path = $target_path . md5(uniqid()) . "." . $ext[count($ext) - 1];     // Set the target path with a new name of image.
+		$j = $j + 1;      // Increment the number of uploaded images according to the files in array.
+		if (($_FILES["file"]["size"][$i] < 100000)  && in_array($file_extension, $validextensions)) {  // Approx. 100kb files can be uploaded.
+			if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {
+				// If file moved to uploads folder.
+				echo $j. ').<span id="noerror">Image uploaded successfully!.</span><br/><br/>';
+			} else {     //  If File Was Not Moved.
+				echo $j. ').<span id="error">please try again!.</span><br/><br/>';
+			}
+		} else {     //   If File Size And File Type Was Incorrect.
+			echo $j. ').<span id="error">***Invalid file Size or Type***</span><br/><br/>';
+		}
+	}
 }
 ?>
