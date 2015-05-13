@@ -33,43 +33,6 @@
     overflow: auto;
     
 }
-.createordeleteresourcecon{
-    position: relative;
-    top: 46px;
-    height: 40px;
-    width: 100px;
-    background-color: black;
-}
-.addcircle{
-    position: relative;
-    width: 30px;
-	height: 30px;
-    left: 60px;
-    top: 5px;
-	background: #00A32C;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius:15px;
-}
-.addcircle:hover{
-    background-color: #308014;
-}
-.addcircleplusone{
-    position: absolute;
-    top: 5px;
-    left: 13px;
-    width: 5px;
-    height: 20px;
-    background-color: white;
-}
-.addcircleplustwo{
-    position: absolute;
-    top: 12px;
-    left: 5px;
-    width: 20px;
-    height: 5px;
-    background-color: white;
-}
 #closecreate{
  	width: 18px;
 	height: 18px;
@@ -93,7 +56,7 @@ body{
     position: relative;
     top: -8px;
     width: 1300px;
-    height: 2100px;
+    height: 800px;
 }
 #navbar{
     position: absolute;
@@ -201,25 +164,128 @@ body{
 #title{
     position: absolute;
     top: 50px;
-    left: 500px;
-    width: 200px;
+    left: 400px;
+    width: 500px;
     padding: 5px;
 }
 #takeaway{
     position: absolute;
     top: 100px;
-    left: 500px;
-    width: 200px;
+    left: 250px;
+    width: 800px;
     padding: 5px;
+}
+#gendescriptioncon{
+    position: relative;
+    top:150px;
+    left: 400px;
+    width: 800px;
+}
+#gendescriptiontitle{
+    position: relative;
+    left: 250px;
 }
 #gendescription{
     position: relative;
     border-bottom: 50px;
-    top:150px;
-    left: 500px;
     resize: none;
-    height: 160px;
-    width: 300px;
+    height: 100px;
+    width: 500px;
     overflow: auto;
     margin-bottom: 90px;
+}
+#createordeleteresourcecon{
+    position: relative;
+    top: 75px;
+    height: 40px;
+    width: 1300px;
+    background-color: black;
+}
+#addcircle{
+    position: absolute;
+    width: 30px;
+	height: 30px;
+    left: 60px;
+    top: 5px;
+	background: #00A32C;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+    cursor: pointer;
+}
+#addcircle:hover{
+    background-color: #308014;
+}
+#addcircleplusone{
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 5px;
+    height: 20px;
+    background-color: white;
+}
+#addcircleplustwo{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 5px;
+    background-color: white;
+}
+#deletecircle{
+    position: absolute;
+    width: 30px;
+	height: 30px;
+    left: 10px;
+    top: 5px;
+	background: #FF0000;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+    cursor: pointer;
+}
+#deletecircle:hover{
+    background-color: #D90000;
+}
+#deletecircleminus{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 5px;
+    background-color: white;
+}
+#conclusioncon{
+ position: relative;
+    margin-top: 100px;
+    left: 320px;
+    width: 800px;
+}
+#conclusiontitle{
+    position: relative;
+    left: 275px;
+    width: 100px;
+}
+#conclusion{
+    position: relative;
+    width: 500px;
+    left: 75px;
+    height: 150px;
+    padding: 5px;
+    overflow: auto;
+    resize: none;
+}
+#lastspecifications{
+    top: 50px;
+    position: relative;
+ width: 1300px;
+    height: 50px;
+    background-color: darkslateblue;
+}
+#tags{
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    width: 300px;
+    padding: 5px;
 }
