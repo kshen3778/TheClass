@@ -26,7 +26,6 @@ session_start();
                 <div id="hyperlinkbuttons">
             <div id="browsebutton">Browse</div>
             <div id="homepagelink" onclick="location.href = '../home_page/homepage-index.php';">Home Page</div>
-            <div id="peertutoring">Peer Tutoring</div>
             <div id="create">Create</div>
             <div id="forum">Forum</div>
         </div>

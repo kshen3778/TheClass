@@ -13,7 +13,7 @@ $(document).ready(function() {
         }
     });
     $("#createpopupbox").hide();
-    $("#create").on("click",function(){
+    /*$("#create").on("click",function(){
         $("#htmlpage").fadeTo(500,0.5);
         $("#navbar").fadeTo(500,0.5);
         $("#navbarinfo").fadeTo(500,0.5);
@@ -36,7 +36,7 @@ $(document).ready(function() {
             $("#navbar").css("z-index", "1");
             $("#navbarinfo").css("z-index", "1");
         });
-    });
+    });*/
     //end of navbar js
     $("#addcircle").on("click",function() {
         $("#createordeleteresourcecon").animate({top: "+=600px"},"slow");

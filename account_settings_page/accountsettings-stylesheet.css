@@ -129,12 +129,7 @@ body{
     display: inline;
     float: left;
     padding: 10px;
-}
-#peertutoring{
-    position: relative;
-    display: inline;
-    float: left;
-    padding: 10px;
+    cursor: pointer;
 }
 #create{
     position: relative;

@@ -124,12 +124,6 @@ body{
     float: left;
     padding: 10px;
 }
-#peertutoring{
-    position: relative;
-    display: inline;
-    float: left;
-    padding: 10px;
-}
 #create{
     position: relative;
     cursor: pointer;
@@ -162,7 +156,7 @@ body{
     text-align: center;
 }
 #title{
-    position: absolute;
+    position: relative;
     top: 50px;
     left: 400px;
     width: 500px;
@@ -193,6 +187,11 @@ body{
     width: 500px;
     overflow: auto;
     margin-bottom: 90px;
+}
+#uploadbutton{
+    position: relative;
+    left: 500px;
+    top: 100px;
 }
 #createordeleteresourcecon{
     position: relative;
