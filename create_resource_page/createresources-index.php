@@ -40,7 +40,7 @@
             <p id="gendescriptiontitle">Introduction</p>
             <textarea id="gendescription" maxlength="400" placeholder="short overview of lesson (optional)"></textarea>
         </div>
-        <input id="uploadbutton" type="file" id="file" value="Upload Resources"/>
+        <input id="uploadbutton" type="file" value="Upload Resources"/>
         <?php include "upload.php"; ?>
         <!--<div class="resourcecontainer">
             <div class="uploadresource"></div>

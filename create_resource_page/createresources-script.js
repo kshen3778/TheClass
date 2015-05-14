@@ -46,28 +46,20 @@ $(document).ready(function() {
         });
     });
 
-    $("#uploadbutton").on("click",function(oInput){
-        var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
-        if (oInput.type == "file") {
-        var sFileName = oInput.value;
-         if (sFileName.length > 0) {
-            var blnValid = false;
-            for (var j = 0; j < _validFileExtensions.length; j++) {
-                var sCurExtension = _validFileExtensions[j];
-                if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-                    blnValid = true;
-                    break;
-                }
-            }
-             
-            if (!blnValid) {
-                alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
-                oInput.value = "";
-                return false;
-            }
+    $("#uploadbutton").change(function(oInput){
+var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
+        var wrongext = false;
+if($.inArray(ext, ['gif','png','jpg','jpeg','pptx']) == -1 ) {
+    alert('invalid extension!');
+    wrongext = true;
+}
+        if(wrongext == false){
+            $("#uploadbutton").before('<div class="resourcecontainer"><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
+            $("#htmlpage").css("height","+=450px;")
         }
-    }
-    return true;
+        if(ext == 'pptx'){
+            $("#uploadresource").append('<img src="Apps-Google-Drive-Slides-icon.PNG">');
+        }
     });
     
    /* var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
