@@ -21,7 +21,7 @@ session_start();
 <body>
     <navbar id="navbar"></navbar>
     <div id="navbarinfo" class="center">
-    <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;" title="browse for courses, lessons, and resources">
+    <input id="generalsearch" type="text" placeholder="search" style="padding-left: 5px;" title="browse for lessons and resources">
         
                 <div id="hyperlinkbuttons">
             <div id="browsebutton">Browse</div>
@@ -42,14 +42,14 @@ session_start();
 
                 <div id="dashboard">
                     <div id="dashboardtabcontainer">
-                        <div id="dashboardyourcourses" class="dashboardtab"><p class="dashboardtabp">my courses</p></div>
+                        <div id="dashboardyouruploads" class="dashboardtab"><p class="dashboardtabp">my uploads</p></div>
                         <div id="dashboardyourlikedcontent" class="dashboardtab"><p class="dashboardtabp">my likes</p></div>
                         <div id="dashboardyoursubs" class="dashboardtab"><p class="dashboardtabp">my subs</p></div>
                         <div id="dashboardtutoringsessions" class="dashboardtab"><p class="dashboardtabp">my tutoring</p></div>
                         <div id="fillinspace"></div>
                     </div>
                     <div id="dashboardmystuff">
-                        <div id="mycoursesbox">my courses</div>
+                        <div id="myuploadsbox">my uploads</div>
                         <div id="mylikesbox">my likes</div>
                         <div id="mysubsbox">my subs box</div>
                         <div id="mytutoringsessionsbox">my peer tutoring sessions</div>

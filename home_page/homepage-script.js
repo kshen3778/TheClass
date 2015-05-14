@@ -64,13 +64,13 @@ $(document).ready(function() {
     
     //fadein tabs animation
     $("#dashboardmystuff").hide();
-    $("#dashboardyourcourses").hide();
+    $("#dashboardyouruploads").hide();
     $("#dashboardyourlikedcontent").hide();
     $("#dashboardyoursubs").hide();
     $("#dashboardtutoringsessions").hide();
     $("#fillinspace").hide();
     
-    $("#dashboardyourcourses").fadeIn(600);
+    $("#dashboardyouruploads").fadeIn(600);
     $("#dashboardyourlikedcontent").fadeIn(700);
     $("#dashboardyoursubs").fadeIn(800);
     $("#dashboardtutoringsessions").fadeIn(900);
@@ -83,27 +83,27 @@ $(document).ready(function() {
     //end of fadein
     
     
-        $("#mycoursesbox").show();
+        $("#myuploadsbox").show();
         $("#mylikesbox").hide();
         $("#mysubsbox").hide();
         $("#mytutoringsessionsbox").hide();
     
 
         $(".dashboardtab").on("click",function(event){
-            $("#dashboardyourcourses").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyouruploads").css({"height":"32px","border-bottom":"solid black 1px"});
             $("#dashboardyourlikedcontent").css({"height":"32px","border-bottom":"solid black 1px"});
             $("#dashboardyoursubs").css({"height":"32px","border-bottom":"solid black 1px"});
             $("#dashboardtutoringsessions").css({"height":"32px","border-bottom":"solid black 1px"});
-            $("#mycoursesbox").hide();
+            $("#myuploadsbox").hide();
             $("#mylikesbox").hide();
             $("#mysubsbox").hide();
             $("#mytutoringsessionsbox").hide();
         });
 
     
-        $("#dashboardyourcourses").on("click",function(){
-            $("#dashboardyourcourses").css({"height":"33px","border-bottom":"none"});
-            $("#mycoursesbox").show();
+        $("#dashboardyouruploads").on("click",function(){
+            $("#dashboardyouruploads").css({"height":"33px","border-bottom":"none"});
+            $("#myuploadsbox").show();
         });
         $("#dashboardyourlikedcontent").on("click",function(){
             $("#dashboardyourlikedcontent").css({"height":"33px","border-bottom":"none"});

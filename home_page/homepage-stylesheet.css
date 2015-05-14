@@ -151,7 +151,7 @@ body{
     width: 1100px;
     background-color: dimgrey;
 }
-#dashboardyourcourses{
+#dashboardyouruploads{
     position: relative;
     display: inline;
     float: left;
@@ -163,7 +163,7 @@ body{
     border-right: solid black 1px;
     cursor:default;
 }
-#mycoursesbox{
+#myuploadsbox{
     position: absolute;
     top: 34px;
     height: 1879px;
