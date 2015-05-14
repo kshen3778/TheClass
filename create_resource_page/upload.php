@@ -19,10 +19,10 @@ if (isset($_POST['submit'])) {
 		$ext = explode('.', basename($_FILES['file']['name'][$i]));   // Explode file name from dot(.)
 		$file_extension = end($ext); // Store extensions in the variable.
 		//$target_path = $target_path . md5(uniqid()) . "." . $ext[count($ext) - 1];     // Set the target path with a new name of image.
-		$target_path = $target_path . "/" . basename($_FILES['file']['name'][$i]) . "." . $ext[count($ext) - 1];
+		$dir = $target_path . "/" . basename($_FILES['file']['name'][$i]);
 		$j = $j + 1;      // Increment the number of uploaded files according to the files in array.
 		if (($_FILES["file"]["size"][$i] < 1000000)  && in_array($file_extension, $validextensions)) {  // Approx. 1mb files can be uploaded.
-			if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {
+			if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $dir)) {
 				// If file moved to uploads folder.
 				echo $j. ').<span id="noerror">File uploaded successfully!.</span><br/><br/>';
 			} else {     //  If File Was Not Moved.
