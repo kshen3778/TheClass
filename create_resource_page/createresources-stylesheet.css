@@ -16,12 +16,24 @@
     width: 800px;
     left: 250px;
 }
-.uploadresource{
+.resourceuploaded{
     position: relative;
     top: 50px;
-    height: 200px;
+    height: 150px;
     width: 800px;
     background-color: white;
+}
+.resourcetitle{
+    position: absolute;
+    top: 33px;
+    width: 800px;
+    height: 30px;
+    background-color: green;
+    opacity: 0.85;
+    z-index: 1;
+    text-align: center;
+    padding-top: 7px;
+    font-color: black;
 }
 .resourcedescription{
     position: relative;
