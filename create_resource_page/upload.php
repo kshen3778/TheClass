@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 				echo $j. ').<span id="error">please try again!.</span><br/><br/>';
 			}
 		} else {     //   If File Size And File Type Was Incorrect.
-			echo $j. ').<span id="error">***Invalid file Size or Type***</span><br/><br/>';
+			echo $j. ').<span id="error">***File too large.***</span><br/><br/>';
 		}
 	}
 }
