@@ -41,8 +41,11 @@
             <textarea id="gendescription" maxlength="400" placeholder="short overview of lesson (optional)"></textarea>
         </div>
         <div id="uploadcontainer">Upload</div>
-            <input id="uploadbutton" type="file" value="Upload Resources"/>
-        <?php include "upload.php"; ?>
+			<form id="confirmresourceform" enctype="multipart/form-data" action="" method="post">
+		<input id="uploadbutton" type="file" value="Upload Resources"/>
+		<input id="confirmresource" type="submit" name="confirmresource">
+	</form>
+		    <?php include "upload.php"; ?>
         <!--<div class="resourcecontainer">
             <div class="uploadresource"></div>
             <textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea>

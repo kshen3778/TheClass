@@ -56,6 +56,7 @@ $(document).ready(function() {
 		
 		//the file extension is right so call the php script
 		if(wrongext == false){
+			$("#confirmresource").click();
 			//call upload.php here
 		}
 		

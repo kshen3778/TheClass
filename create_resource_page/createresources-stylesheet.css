@@ -221,6 +221,9 @@ body{
     height: 30px;
     visibility:hidden;
 }
+#confirmresourceform{
+visibility: hidden;
+}
 #createordeleteresourcecon{
     position: relative;
     top: 75px;
