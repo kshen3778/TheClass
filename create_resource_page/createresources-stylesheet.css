@@ -10,7 +10,7 @@
     left: 4px;
     top: -2px;
 }
-.resourcecontainer{
+.containerresource{
     position: relative;
     margin-top: 50px;
     width: 800px;
@@ -25,15 +25,19 @@
 }
 .resourcetitle{
     position: absolute;
-    top: 33px;
+    top: 48px;
     width: 800px;
     height: 30px;
-    background-color: green;
+    background-color: grey;
     opacity: 0.85;
     z-index: 1;
+}
+.resourcetitlep{
+    position: absolute;
+    left: 300px;
+    top: 33px;
+    z-index: 2;
     text-align: center;
-    padding-top: 7px;
-    font-color: black;
 }
 .resourcedescription{
     position: relative;
@@ -200,13 +204,22 @@ body{
     overflow: auto;
     margin-bottom: 90px;
 }
+#uploadcontainer{
+    position: relative;
+    left: 400px;
+    top: 100px;
+    width: 500px;
+    height: 30px;
+    background-color: darkgoldenrod;
+    text-align: center;
+    padding-top: 10px;
+}
 #uploadbutton{
     position: relative;
-    left: 500px;
-    top: 100px;
     background-color:darkslategrey;
     width: 300px;
     height: 30px;
+    visibility:hidden;
 }
 #createordeleteresourcecon{
     position: relative;

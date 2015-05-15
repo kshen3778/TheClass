@@ -49,19 +49,38 @@ $(document).ready(function() {
     $("#uploadbutton").change(function(oInput){
 var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
         var wrongext = false;
-if($.inArray(ext, ['gif','png','jpg','jpeg','pptx']) == -1 ) {
-    alert('invalid extension!');
+if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
+    alert("Sorry you can't upload files of this type :(");
     wrongext = true;
 }
         if(wrongext == false){
-            $("#uploadbutton").before('<div class="resourcecontainer"><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
+            $("#uploadcontainer").before('<div class="resourcecontainer"><div class="resourcetitle"></div><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
             $("#htmlpage").css("height","+=450px;")
         }
+        var removeuploadclass = function(){
+            $(".uploadresource").addClass("resourceuploaded");
+            $(".resourceuploaded").removeClass("uploadresource"); 
+        };
         if(ext == 'pptx'){
-            $("#uploadresource").append('<img src="Apps-Google-Drive-Slides-icon.PNG">');
+            $(".uploadresource").append('<img src="Apps-Google-Drive-Slides-icon.png">');
+            removeuploadclass();
         }
+        if(ext == 'docx'){
+            $(".uploadresource").append('<img src="Apps-Google-Drive-Docs-icon.png">');
+            removeuploadclass();
+        }
+        if(ext == 'xlsm'){
+            $(".uploadresource").append('<img src="Apps-Google-Drive-Sheets-icon.png">');
+            removeuploadclass();
+        }
+        $(".resourcecontainer").append("<p class='resourcetitlep'>"+ $('#uploadbutton').val().split('.').shift().split('fakepath').pop().substring(1, this.length)+"</p>");
+        $(".resourcecontainer").addClass("containerresource");
+        $(".resourcecontainer").removeClass("resourcecontainer");
     });
     
+    $("#uploadcontainer").on("click",function(){
+        $("#uploadbutton").click();
+    });
    /* var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
 function ValidateSingleInput(oInput) {
     if (oInput.type == "file") {
