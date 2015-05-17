@@ -48,7 +48,7 @@ $(document).ready(function() {
 
     $("#uploadbutton").change(function(oInput){
 		var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
-				var wrongext = false;
+		var wrongext = false;
 		if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
 			alert("Sorry you can't upload files of this type :(");
 			wrongext = true;
