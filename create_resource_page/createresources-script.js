@@ -45,57 +45,79 @@ $(document).ready(function() {
             $("#createordeleteresourcecon").before('<div class="resourcecontainer"><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
         });
     });
-
-    $("#uploadbutton").change(function(oInput){
-		var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
-				var wrongext = false;
-		if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
-			alert("Sorry you can't upload files of this type :(");
-			wrongext = true;
-		}
+	
+	var files; //array of files currently in the lesson[INCOMPLETE]
+   $("#uploadbutton").change(function(oInput){
+			
+			var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
+			//var ext = filename.split('.').pop().toLowerCase();
+			var wrongext = false;
+			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
+				alert("Sorry you can't upload files of this type :(");
+				wrongext = true;
+			}
+			
+			//the file extension is right so call the php script
+			if(wrongext == false){
+				$("#confirmresource").click();
+			}
+			
+			//display resource container
+			if(wrongext == false){
+				$("#uploadcontainer").before('<div class="resourcecontainer"><div class="resourcetitle"></div><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
+				$("#htmlpage").css("height","+=450px;")
+			}
+			
+			//detect if image is displayed
+			var removeuploadclass = function(){
+				$(".uploadresource").addClass("resourceuploaded");
+				$(".resourceuploaded").removeClass("uploadresource"); 
+			};
+			
+			//display the icon
+			if(ext == 'pptx'){
+				$(".uploadresource").append('<img src="Apps-Google-Drive-Slides-icon.png">');
+				removeuploadclass();
+			}
+			if(ext == 'docx'){
+				$(".uploadresource").append('<img src="Apps-Google-Drive-Docs-icon.png">');
+				removeuploadclass();
+			}
+			if(ext == 'xlsm'){
+				$(".uploadresource").append('<img src="Apps-Google-Drive-Sheets-icon.png">');
+				removeuploadclass();
+			}
+			
+			//text displaying
+			$(".resourcecontainer").append("<p class='resourcetitlep'>"+ $('#uploadbutton').val().split('.').shift().split('fakepath').pop().substring(1, this.length)+"</p>");
+			//$(".resourcecontainer").append("<p class='resourcetitlep'>"+ filename.split('.').shift().split('fakepath').pop().substring(1, this.length)+"</p>");
+			$(".resourcecontainer").addClass("containerresource");
+			$(".resourcecontainer").removeClass("resourcecontainer");
 		
-		//the file extension is right so call the php script
-		if(wrongext == false){
-			$("#confirmresource").click();
-			//call upload.php here
-		}
-		
-		//display resource container
-        if(wrongext == false){
-            $("#uploadcontainer").before('<div class="resourcecontainer"><div class="resourcetitle"></div><div class="uploadresource"></div><textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea></div>');
-            $("#htmlpage").css("height","+=450px;")
-        }
-		
-		//detect if image is displayed
-        var removeuploadclass = function(){
-            $(".uploadresource").addClass("resourceuploaded");
-            $(".resourceuploaded").removeClass("uploadresource"); 
-        };
-		
-		//display the icon
-        if(ext == 'pptx'){
-            $(".uploadresource").append('<img src="Apps-Google-Drive-Slides-icon.png">');
-            removeuploadclass();
-        }
-        if(ext == 'docx'){
-            $(".uploadresource").append('<img src="Apps-Google-Drive-Docs-icon.png">');
-            removeuploadclass();
-        }
-        if(ext == 'xlsm'){
-            $(".uploadresource").append('<img src="Apps-Google-Drive-Sheets-icon.png">');
-            removeuploadclass();
-        }
-		
-		//text displaying
-        $(".resourcecontainer").append("<p class='resourcetitlep'>"+ $('#uploadbutton').val().split('.').shift().split('fakepath').pop().substring(1, this.length)+"</p>");
-        $(".resourcecontainer").addClass("containerresource");
-        $(".resourcecontainer").removeClass("resourcecontainer");
     });
     
     $("#uploadcontainer").on("click",function(){
         $("#uploadbutton").click();
 		
     });
+	
+	$("#submitresource").on("click",function(){
+		//save all information to a file in the lesson folder
+        var title = $("#title").val();
+		var takeaway = $("#takeaway").val();
+		var intro = $("#gendescription").val();
+		var conclusion = $("#conclusion").val();
+		var allFiles = JSON.stringify(files); //the file names
+		$.ajax({
+			type: "POST",
+			url: 'submitresource.php',
+			data: { title: title, takeaway: takeaway, intro: intro, conclusion: conclusion, files: allFiles },
+			success: function(data){
+				console.log(data);
+			}
+		});
+    });
+	
    /* var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
 function ValidateSingleInput(oInput) {
     if (oInput.type == "file") {
@@ -126,4 +148,4 @@ function ValidateSingleInput(oInput) {
                 $(event.target).closest('.resourcecontainer').remove();
             }
         });*/
-    });
+});

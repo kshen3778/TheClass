@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<?php
+//session_start();
+?>
 <html>
 	<link rel="stylesheet" type="text/css" href="createresources-stylesheet.css"/>
     	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -40,6 +43,7 @@
             <p id="gendescriptiontitle">Introduction</p>
             <textarea id="gendescription" maxlength="400" placeholder="short overview of lesson (optional)"></textarea>
         </div>
+		
         <div id="uploadcontainer">Upload</div>
 	
 	<form id="confirmresourceform" enctype="multipart/form-data" action="" method="post">
