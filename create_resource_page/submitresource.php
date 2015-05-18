@@ -5,10 +5,9 @@ $title = $_POST['title'];
 $takeaway = $_POST['takeaway'];
 $intro = $_POST['intro'];
 $conclusion = $_POST['conclusion'];
-$files = $_POST['filenames'];
+$files = $_POST['files'];
 
-$data = array(
-	'title' => $title, 
+$data = array('title' => $title, 
 	'takeaway' => $takeaway,
 	'intro' => $intro, 
 	'conclusion' => $conclusion, 

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <?php
-session_start();
+//session_start();
 ?>
 <html>
 	<link rel="stylesheet" type="text/css" href="createresources-stylesheet.css"/>
@@ -51,8 +51,6 @@ session_start();
 		<input id="confirmresource" type="submit" name="confirmresource">
 	</form>
 	<?php include "upload.php"; ?>
-	
-	<input type="hidden" name="deliver" value="<?=$_SESSION['username'];?>"></input> <!--deliver session variable to js-->
         <!--<div class="resourcecontainer">
             <div class="uploadresource"></div>
             <textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea>

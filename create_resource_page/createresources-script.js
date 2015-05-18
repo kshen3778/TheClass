@@ -1,17 +1,3 @@
-function fetchJSONFile(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                var data = JSON.parse(httpRequest.responseText);
-                if (callback) callback(data);
-            }
-        }
-    };
-    httpRequest.open('GET', path);
-    httpRequest.send(); 
-}
-
 var toggleshowprofile = false;
 $(document).ready(function() {
 
@@ -60,7 +46,7 @@ $(document).ready(function() {
         });
     });
 	
-	var files = 6; //array of files currently in the lesson[INCOMPLETE]
+	var files; //array of files currently in the lesson[INCOMPLETE]
    $("#uploadbutton").change(function(oInput){
 			
 			var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
@@ -125,7 +111,7 @@ $(document).ready(function() {
 		$.ajax({
 			type: "POST",
 			url: 'submitresource.php',
-			data: { title: title, takeaway: takeaway, intro: intro, conclusion: conclusion, filenames: allFiles },
+			data: { title: title, takeaway: takeaway, intro: intro, conclusion: conclusion, files: allFiles },
 			success: function(data){
 				console.log(data);
 			}
@@ -162,11 +148,4 @@ function ValidateSingleInput(oInput) {
                 $(event.target).closest('.resourcecontainer').remove();
             }
         });*/
-		
-		//load the shit from the JSON file into the page
-	/*	var username = document.getElementsByName('deliver').value;
-		fetchJSONFile('../Users/' + username + '/data.json', function(data){
-				// do something with your data
-				console.log(data);
-		});*/
 });
