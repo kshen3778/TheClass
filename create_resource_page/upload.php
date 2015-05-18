@@ -14,7 +14,7 @@ if (isset($_POST['confirmresource'])) {
 	}
 	$target_path = $target_path . "/";
 	$_SESSION['path'] = $target_path; //store the path to the lesson folder as a session variable				
-		
+	
 		// Loop to get individual element from the array
 		$validextensions = array("jpeg", "jpg", "png", "PNG", "JPG", "ppt", "pptx", "doc", "docx", "xls", "xlsx", "txt", "pdf", "mp4" );      // Extensions which are allowed.
 		//$ext = explode('.', basename($_FILES['fileToUpload']));   // Explode file name from dot(.)

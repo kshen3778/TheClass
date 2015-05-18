@@ -164,9 +164,19 @@ function ValidateSingleInput(oInput) {
         });*/
 		
 		//load the shit from the JSON file into the page
-		var username = document.getElementsByName('deliver').value;
-		fetchJSONFile('../Users/' + username + '/data.json', function(data){
-				// do something with your data
+		
+		$.get('getsession.php', function(data) {
+			var path = data; // $_SESSION['username'] in this case
+			console.log(path);
+		
+		
+			fetchJSONFile(path + 'data.json', function(data){
 				console.log(data);
+				//put the shit in the textarea
+				$('#title').val(''); //title
+				$('#takeaway').val(''); //takeaway
+				$('#gendescription').val(''); //intro
+				$('#conclusion').val('');
+			});
 		});
 });

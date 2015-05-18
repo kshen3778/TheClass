@@ -52,7 +52,7 @@ session_start();
 	</form>
 	<?php include "upload.php"; ?>
 	
-	<input type="hidden" name="deliver" value="<?=$_SESSION['username'];?>"></input> <!--deliver session variable to js-->
+	<input id="usernamevariable" type="hidden" name="deliver" value="<?=$_SESSION['username'];?>"></input> <!--deliver session variable to js-->
         <!--<div class="resourcecontainer">
             <div class="uploadresource"></div>
             <textarea class="resourcedescription" maxlength="800" placeholder="describe how it should be used in the classroom"></textarea>
