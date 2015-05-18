@@ -15,7 +15,7 @@ $data = array(
 	'files' => $files
 );
 //$data[] = ['title' => $title, 'takeaway' => $takeaway, 'intro' => $intro, 'conclusion' => $conclusion, 'files' => $files];
-
+echo $_SESSION['path'];
 //generate the json file and copy data to it
 $fp = fopen($_SESSION['path'] . 'data.json', 'w');
 fwrite($fp, json_encode($data));

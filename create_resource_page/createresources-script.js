@@ -60,7 +60,7 @@ $(document).ready(function() {
         });
     });
 	
-	var files = 6; //array of files currently in the lesson[INCOMPLETE]
+	var files; //array of files currently in the lesson[INCOMPLETE]
    $("#uploadbutton").change(function(oInput){
 			
 			var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
@@ -164,9 +164,9 @@ function ValidateSingleInput(oInput) {
         });*/
 		
 		//load the shit from the JSON file into the page
-	/*	var username = document.getElementsByName('deliver').value;
+		var username = document.getElementsByName('deliver').value;
 		fetchJSONFile('../Users/' + username + '/data.json', function(data){
 				// do something with your data
 				console.log(data);
-		});*/
+		});
 });

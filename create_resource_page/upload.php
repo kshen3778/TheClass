@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 if (isset($_POST['confirmresource'])) {
 	//echo "upload php script is working";
 	$j = 0;     // Variable for indexing uploaded image.
@@ -13,7 +13,6 @@ if (isset($_POST['confirmresource'])) {
 		mkdir($target_path);
 	}
 	$target_path = $target_path . "/";
-	$lessondesc = fopen($target_path . "lesson_description.txt", "w"); //create the description file for lesson
 	$_SESSION['path'] = $target_path; //store the path to the lesson folder as a session variable				
 		
 		// Loop to get individual element from the array
