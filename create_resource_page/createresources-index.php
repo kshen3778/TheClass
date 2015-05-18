@@ -46,11 +46,11 @@ session_start();
 		
         <div id="uploadcontainer">Upload</div>
 	
-	<form id="confirmresourceform" enctype="multipart/form-data" action="" method="post">
+	<form id="confirmresourceform" enctype="multipart/form-data" action="upload.php" method="post">
 		<input id="uploadbutton" name="fileToUpload" type="file" value="Upload Resources"/>
 		<input id="confirmresource" type="submit" name="confirmresource">
 	</form>
-	<?php include "upload.php"; ?>
+	
 	
 	<input id="usernamevariable" type="hidden" name="deliver" value="<?=$_SESSION['username'];?>"></input> <!--deliver session variable to js-->
         <!--<div class="resourcecontainer">
