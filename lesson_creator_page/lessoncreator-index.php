@@ -42,15 +42,20 @@ session_start();
         <textarea id="lessondescription" placeholder="your lesson description" maxlength="800"></textarea>
         
         
-        
+        <!--supportingcontent upload-->
         <div id="submitsupportingcontent"> Submit Supporting Content</div>
         	<form id="confirmresourceform" enctype="multipart/form-data" action="upload.php" method="post" style="display: none;">
-		<input id="uploadsupportingcontent" name="fileToUpload" type="file" value="Upload Resources"/>
-		<input id="confirmresource" type="submit" name="confirmresource">
-	</form>
+		      <input id="uploadsupportingcontent" name="fileToUpload" type="file" value="Upload Resources"/>
+		      <input id="confirmresource" type="submit" name="confirmresource">
+	       </form>
         <div id="uploadtextareaorreading">
-            <div id="insertreading"></div>
         <textarea id="writenlecture"></textarea>
+        <!--reading upload-->
+        <div id="insertreading">Insert Reading</div>
+            <form id="confirmreadingform" enctype="multipart/form-data" action="upload.php" method="post" style="display: none;">
+		      <input id="uploadreading" name="fileToUpload" type="file" value="Upload Resources"/>
+		      <input id="confirmreading" type="submit" name="confirmresource">
+	       </form>
         </div>
         <div id="submitchanges">Submit Changes</div>
     </div>

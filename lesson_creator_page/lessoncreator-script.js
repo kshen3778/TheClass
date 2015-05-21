@@ -61,16 +61,14 @@ $(document).ready(function() {
         });
     });*/
     //end of navbar js
-
+//code for insert supporting content
     $("#submitsupportingcontent").on("click",function(){
         $("#uploadsupportingcontent").click();
     });
-    
-    
-    
+    //for when the user uloads supporting content or"video"
     $("#uploadsupportingcontent").change(function(){
         //check to see if file extensions are valid
-        var ext = $('#uploadbutton').val().split('.').pop().toLowerCase();
+        var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
 			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
@@ -80,6 +78,7 @@ $(document).ready(function() {
             //submitting and clicking php script when user uploaded correct ext
             if(wrongext == false){
 				$("#confirmresource").click();
+                alert("hi");
 			}
         
         
@@ -94,6 +93,29 @@ $(document).ready(function() {
         }
     });
     
+    //code for insertreading
+    $("#insertreading").on("click",function(){
+        $("#uploadreading").click();
+    });
+    $("#uploadreading").change(function(){
+        //check to see if file extensions are valid
+        var ext = $('#uploadreading').val().split('.').pop().toLowerCase();
+			//var ext = filename.split('.').pop().toLowerCase();
+			var wrongext = false;
+			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
+				alert("Sorry you can't upload files of this type :(");
+				wrongext = true;
+			}
+            //submitting and clicking php script when user uploaded correct ext
+            if(wrongext == false){
+				$("#confirmreading").click();
+                alert("hi");
+                $("#writenlecture").hide();
+			}
+        
+        
+        
+    });
     
     
     
