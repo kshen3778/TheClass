@@ -45,14 +45,24 @@ session_start();
         <!--supportingcontent upload-->
         <div id="submitsupportingcontent"> Submit Lecture Content</div>
         	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
+<<<<<<< HEAD
 		      <input id="uploadsupportingcontent" name="fileToUpload" type="file" value="Upload Resources"/>
+=======
+		      <input id="uploadsupportingcontent" name="fileToUpload1" type="file" value="Upload Resources"/>
+		      <input id="confirmresource" type="submit" name="confirmresource">
+>>>>>>> origin/master
 	       </form>
         <div id="uploadtextareaorreading">
         <textarea id="writenlecture"></textarea>
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>
             <form id="confirmreadingform" enctype="multipart/form-data" method="post" style="display: none;">
+<<<<<<< HEAD
 		      <input id="uploadreading" name="fileToUpload" type="file" value="Upload Resources"/>
+=======
+		      <input id="uploadreading" name="fileToUpload2" type="file" value="Upload Resources"/>
+		      <input id="confirmreading" type="submit" name="confirmresource">
+>>>>>>> origin/master
 	       </form>
         </div>
         <div id="submitchanges">Submit Changes</div>
