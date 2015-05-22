@@ -65,7 +65,7 @@ $(document).ready(function() {
     $("#submitsupportingcontent").on("click",function(){
         $("#uploadsupportingcontent").click();
     });
-    //for when the user uloads supporting content or"video"
+    //for when the user uploads supporting content or"video"
     $("#uploadsupportingcontent").change(function(){
         //check to see if file extensions are valid
         var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
@@ -115,6 +115,24 @@ $(document).ready(function() {
         
         
         
+    });
+	
+	//Submit changes
+	$("#submitchanges").on("click",function(){
+		//save all information to a file in the lesson folder
+        var title = $("#title").val();
+		var takeaway = $("#takeaway").val();
+		var intro = $("#gendescription").val();
+		var conclusion = $("#conclusion").val();
+		var allFiles = JSON.stringify(files); //the file names
+		$.ajax({
+			type: "POST",
+			url: 'submitresource.php',
+			data: { title: title, takeaway: takeaway, intro: intro, conclusion: conclusion, filenames: allFiles },
+			success: function(data){
+				console.log(data);
+			}
+		});
     });
     
     

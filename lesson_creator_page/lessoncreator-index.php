@@ -43,7 +43,7 @@ session_start();
         
         
         <!--supportingcontent upload-->
-        <div id="submitsupportingcontent"> Submit Supporting Content</div>
+        <div id="submitsupportingcontent"> Submit Lecture Content</div>
         	<form id="confirmresourceform" enctype="multipart/form-data" action="upload.php" method="post" style="display: none;">
 		      <input id="uploadsupportingcontent" name="fileToUpload" type="file" value="Upload Resources"/>
 		      <input id="confirmresource" type="submit" name="confirmresource">

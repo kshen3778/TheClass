@@ -2,7 +2,7 @@
 //session_start();
 if (isset($_POST['confirmresource'])) {
 	//echo "upload php script is working";
-	$j = 0;     // Variable for indexing uploaded image.
+	//$j = 0;     // Variable for indexing uploaded image.
 	$target_path = "../Users/" . $_SESSION['username'] . "/";     // Declaring Path for uploaded files. Upload to folder
 	$filename = $_FILES['fileToUpload']; //file name
 	$_SESSION['file'] = $_FILES['fileToUpload']['name']; //store the file name as a session
@@ -16,7 +16,7 @@ if (isset($_POST['confirmresource'])) {
 	$_SESSION['path'] = $target_path; //store the path to the lesson folder as a session variable				
 	
 		// Loop to get individual element from the array
-		$validextensions = array("jpeg", "jpg", "png", "PNG", "JPG", "ppt", "pptx", "doc", "docx", "xls", "xlsx", "txt", "pdf", "mp4" );      // Extensions which are allowed.
+		//$validextensions = array("jpeg", "jpg", "png", "PNG", "JPG", "ppt", "pptx", "doc", "docx", "xls", "xlsx", "txt", "pdf", "mp4" );      // Extensions which are allowed.
 		//$ext = explode('.', basename($_FILES['fileToUpload']));   // Explode file name from dot(.)
 		//$file_extension = end($ext); // Store extensions in the variable.
 		//$target_path = $target_path . md5(uniqid()) . "." . $ext[count($ext) - 1];     // Set the target path with a new name of image.
