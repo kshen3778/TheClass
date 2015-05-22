@@ -42,7 +42,7 @@ session_start();
         <textarea id="lessondescription" placeholder="your lesson description" maxlength="800"></textarea>
         
         
-        <!--supportingcontent upload-->
+        <!--lecture upload-->
         <div id="submitsupportingcontent"> Submit Lecture Content</div>
         	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
 		      <input id="uploadsupportingcontent" name="fileToUpload1" type="file" value="Upload Resources"/>

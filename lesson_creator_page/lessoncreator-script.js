@@ -36,6 +36,7 @@ $(document).ready(function() {
     })
 	
     $("#createpopupbox").hide();
+	
     /*$("#create").on("click",function(){
         $("#htmlpage").fadeTo(500,0.5);
         $("#navbar").fadeTo(500,0.5);
@@ -60,8 +61,9 @@ $(document).ready(function() {
             $("#navbarinfo").css("z-index","1");
         });
     });*/
+	
     //end of navbar js
-//code for insert supporting content
+	//code for insert supporting content
     $("#submitsupportingcontent").on("click",function(){
         $("#uploadsupportingcontent").click();
     });
@@ -77,6 +79,7 @@ $(document).ready(function() {
 			}
         
     });
+	
     $("#writenlecture").keyup(function(){
         if($("#writenlecture").val()!==0){
             $("#insertreading").hide();
