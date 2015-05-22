@@ -126,7 +126,7 @@ $(document).ready(function() {
 		//var conclusion = $("#conclusion").val();
 		
 		//lecture
-		var lecture = $('#uploadsupportingcontent').val();
+		var lecture = $('#uploadlecture').val();
 		//var myFile = $('#fileToUpload1').prop('files');
 		alert(lecture);
 		var lecturename = "";
