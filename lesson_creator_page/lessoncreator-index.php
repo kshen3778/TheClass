@@ -44,17 +44,17 @@ session_start();
         
         <!--supportingcontent upload-->
         <div id="submitsupportingcontent"> Submit Lecture Content</div>
-        	<form id="confirmresourceform" enctype="multipart/form-data" action="upload.php" method="post" style="display: none;">
+        	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
 		      <input id="uploadsupportingcontent" name="fileToUpload" type="file" value="Upload Resources"/>
-		      <input id="confirmresource" type="submit" name="confirmresource">
+		      <input id="confirmresource" type="submit" name="confirmresource" action="upload.php">
 	       </form>
         <div id="uploadtextareaorreading">
         <textarea id="writenlecture"></textarea>
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>
-            <form id="confirmreadingform" enctype="multipart/form-data" action="upload.php" method="post" style="display: none;">
+            <form id="confirmreadingform" enctype="multipart/form-data" method="post" style="display: none;">
 		      <input id="uploadreading" name="fileToUpload" type="file" value="Upload Resources"/>
-		      <input id="confirmreading" type="submit" name="confirmresource">
+		      <input id="confirmreading" type="submit" name="confirmresource" action="upload.php">
 	       </form>
         </div>
         <div id="submitchanges">Submit Changes</div>
