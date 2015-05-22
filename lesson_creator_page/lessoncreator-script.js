@@ -71,10 +71,15 @@ $(document).ready(function() {
         var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
-			if($.inArray(ext, ['pdf','docx','pages']) == -1 ) {
+			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx']) == -1 ) {
 				alert("Sorry you can't upload files of this type :(");
 				wrongext = true;
 			}
+        if(ext=="pptx"){
+            $("#submitsupportingcontent").hide();
+            $("#submitsupportingcontentcon").append('<img id="lectureimage" src="Microsoft_PowerPoint_2013_logo.png">');
+        }
+        
         
     });
     $("#writenlecture").keyup(function(){
@@ -101,11 +106,10 @@ $(document).ready(function() {
         var ext = $('#uploadreading').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
-			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
+			if($.inArray(ext, ['pdf','docx','pages']) == -1 ) {
 				alert("Sorry you can't upload files of this type :(");
 				wrongext = true;
 			}
- 
     });
 	
 	//Submit changes
