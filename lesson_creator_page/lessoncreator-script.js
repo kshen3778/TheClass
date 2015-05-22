@@ -73,11 +73,12 @@ $(document).ready(function() {
         var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
-			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx']) == -1 ) {
+			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx', 'ppt']) == -1 ) {
 				alert("Sorry you can't upload files of this type :(");
 				wrongext = true;
 			}
-        if(ext=="pptx"){
+		//check if extension is powerpoint
+        if(ext=="pptx" || ext=="ppt"){
             $("#submitsupportingcontent").hide();
             $("#submitsupportingcontentcon").append('<img id="lectureimage" src="Microsoft_PowerPoint_2013_logo.png">');
         }
@@ -85,6 +86,7 @@ $(document).ready(function() {
         
     });
 	
+	//making sure they either upload or use text
     $("#writenlecture").keyup(function(){
         if($("#writenlecture").val()!==0){
             $("#insertreading").hide();

@@ -42,21 +42,21 @@ session_start();
         <textarea id="lessondescription" placeholder="your lesson description" maxlength="800"></textarea>
         
         
-<<<<<<< HEAD
+
+        
         <!--lecture upload-->
-        <div id="submitsupportingcontent"> Submit Lecture Content</div>
-=======
-        <!--supportingcontent upload-->
         <div id="submitsupportingcontentcon">
             <div id="submitsupportingcontent"> Submit Lecture Content</div>
         </div>
->>>>>>> origin/master
+
         	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
 		      <input id="uploadsupportingcontent" name="fileToUpload1" type="file" value="Upload Resources"/>
 	       </form>
         
+		<!-- Text area for supporting reading-->
         <div id="uploadtextareaorreading">
         <textarea id="writenlecture"></textarea>
+		
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>
             <form id="confirmreadingform" enctype="multipart/form-data" method="post" style="display: none;">
