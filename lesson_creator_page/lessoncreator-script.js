@@ -117,18 +117,19 @@ $(document).ready(function() {
 		//var conclusion = $("#conclusion").val();
 		
 		//lecture
-		var lecture = $('#fileToUpload1').val();
+		var lecture = $('#uploadsupportingcontent').val();
+		//var myFile = $('#fileToUpload1').prop('files');
 		alert(lecture);
 		var lecturename = "";
 		if(lecture != "" || lecture != null){
-			lecturename = lecture.split("/").pop(); //take the last element which is the filename
+			lecturename = lecture.split("\\").pop(); //take the last element which is the filename
 		}else{
 			alert("You need to upload a file");
 		}
 		
 		//text and reading
-		var reading = $('#fileToUpload2').val();
-		alert(reading);
+		var reading = $('#uploadreading').val();
+		//alert(reading);
 		var readingname = "";
 		//supporting reading isn't necessary but in the future check if the textbox has content
 		readingname = reading.split("/").pop(); //take the last element which is the filename
