@@ -45,17 +45,17 @@ session_start();
 
         
         <!--lecture upload-->
-        <div id="submitsupportingcontentcon">
-            <div id="submitsupportingcontent"> Submit Lecture Content</div>
+        <div id="submitlecturecon">
+            <div id="submitlecture"> Submit Lecture Content</div>
         </div>
 
         	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
-		      <input id="uploadsupportingcontent" name="fileToUpload1" type="file" value="Upload Resources"/>
+		      <input id="uploadlecture" name="fileToUpload1" type="file" value="Upload Resources"/>
 	       </form>
         
 		<!-- Text area for supporting reading-->
         <div id="uploadtextareaorreading">
-        <textarea id="writenlecture"></textarea>
+        <textarea id="writtenreading"></textarea>
 		
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>

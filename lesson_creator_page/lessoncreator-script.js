@@ -63,14 +63,14 @@ $(document).ready(function() {
     });*/
 	
     //end of navbar js
-	//code for insert supporting content
-    $("#submitsupportingcontent").on("click",function(){
-        $("#uploadsupportingcontent").click();
+	//code for insert lecture
+    $("#submitlecture").on("click",function(){
+        $("#uploadlecture").click();
     });
     //for when the user uploads supporting content or"video"
-    $("#uploadsupportingcontent").change(function(){
+    $("#uploadlecture").change(function(){
         //check to see if file extensions are valid
-        var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
+        var ext = $('#uploadlecture').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
 			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx', 'ppt']) == -1 ) {
@@ -78,27 +78,27 @@ $(document).ready(function() {
 				wrongext = true;
 			}
 		//check if extension is powerpoint
-        if(ext=="pptx" || ext=="ppt"){
-            $("#submitsupportingcontent").hide();
-            $("#submitsupportingcontentcon").append('<img id="lectureimage" src="Microsoft_PowerPoint_2013_logo.png">');
-        }
+        /*if(ext=="pptx" || ext=="ppt"){
+            $("#submitlecture").hide();
+            $("#submitlecturecon").append('<img id="lectureimage" src="Microsoft_PowerPoint_2013_logo.png">');
+        }*/
         
         
     });
 	
 	//making sure they either upload or use text
-    $("#writenlecture").keyup(function(){
-        if($("#writenlecture").val()!==0){
+    $("#writtenreading").keyup(function(){
+        if($("#writtenreading").val()!==0){
             $("#insertreading").hide();
         }
-        if($("#writenlecture").val()==0){
+        if($("#writtenreading").val()==0){
             $("#insertreading").show();    
         }
     });
     
     //code for insertreading
     $("#insertreading").on("click",function(){
-        if($("#writenlecture").val()==0){
+        if($("#writtenreading").val()==0){
             $("#uploadreading").click();
         }
         else{
