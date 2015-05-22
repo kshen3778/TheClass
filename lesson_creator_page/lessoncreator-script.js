@@ -71,17 +71,10 @@ $(document).ready(function() {
         var ext = $('#uploadsupportingcontent').val().split('.').pop().toLowerCase();
 			//var ext = filename.split('.').pop().toLowerCase();
 			var wrongext = false;
-			if($.inArray(ext, ['gif','png','jpg','jpeg','pptx','docx','xlsm']) == -1 ) {
+			if($.inArray(ext, ['pdf','docx','pages']) == -1 ) {
 				alert("Sorry you can't upload files of this type :(");
 				wrongext = true;
 			}
-            //submitting and clicking php script when user uploaded correct ext
-            if(wrongext == false){
-				$("#confirmresource").click();
-                alert("hi");
-			}
-        
-        
         
     });
     $("#writenlecture").keyup(function(){
@@ -95,7 +88,13 @@ $(document).ready(function() {
     
     //code for insertreading
     $("#insertreading").on("click",function(){
-        $("#uploadreading").click();
+        if($("#writenlecture").val()==0){
+            $("#uploadreading").click();
+        }
+        else{
+            alert("nice try. But you still can't upload 2 files at once :)");
+            $("#insertreading").hide();
+        }
     });
     $("#uploadreading").change(function(){
         //check to see if file extensions are valid
@@ -106,15 +105,7 @@ $(document).ready(function() {
 				alert("Sorry you can't upload files of this type :(");
 				wrongext = true;
 			}
-            //submitting and clicking php script when user uploaded correct ext
-            if(wrongext == false){
-				$("#confirmreading").click();
-                alert("hi");
-                $("#writenlecture").hide();
-			}
-        
-        
-        
+ 
     });
 	
 	//Submit changes
