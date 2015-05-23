@@ -1,3 +1,0 @@
-Lecture: video.mp4
-Reading: someshit.txt
-Additional_files: something.pdf, stuff.ppt

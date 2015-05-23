@@ -120,18 +120,18 @@ $(document).ready(function() {
 	//Submit changes
 	$("#submitchanges").on("click",function(){
 		//save all information to a file in the lesson folder
-        var title = $("#title").val();
-		//var takeaway = $("#takeaway").val();
-		//var intro = $("#gendescription").val();
-		//var conclusion = $("#conclusion").val();
+        var title = $("#lessontitle").val();
+		var desc = $("#lessondescription").val();
+		
 		
 		//lecture
 		var lecture = $('#uploadlecture').val();
 		//var myFile = $('#fileToUpload1').prop('files');
-		alert(lecture);
+		//alert(lecture);
 		var lecturename = "";
 		if(lecture != "" || lecture != null){
 			lecturename = lecture.split("\\").pop(); //take the last element which is the filename
+			
 		}else{
 			alert("You need to upload a file");
 		}
@@ -141,12 +141,12 @@ $(document).ready(function() {
 		//alert(reading);
 		var readingname = "";
 		//supporting reading isn't necessary but in the future check if the textbox has content
-		readingname = reading.split("/").pop(); //take the last element which is the filename
-		
+		readingname = reading.split("\\").pop(); //take the last element which is the filename
+	
 		$.ajax({
 			type: "POST",
-			url: 'upload.php',
-			data: { title: title, lecture: lecturename, reading: readingname },
+			url: 'copydata.php',
+			data: { title: title, desc: desc, lecture: lecturename, reading: readingname },
 			success: function(data){
 				console.log(data);
 			}
