@@ -119,7 +119,7 @@ $(document).ready(function() {
 	
 	//Submit changes
 	$("#submitchanges").on("click",function(){
-		//save all information to a file in the lesson folder
+		//Save information to datafile
         var title = $("#lessontitle").val();
 		var desc = $("#lessondescription").val();
 		
@@ -151,8 +151,26 @@ $(document).ready(function() {
 				console.log(data);
 			}
 		});
+		
+		
     });
-    
+	
+    $("#submitchanges").on("click",function(){
+		//Upload files
+		var formData = new FormData($("#confirmreading"));
+		//formData.append('lecture', $('#uploadlecture'));
+		formData.append('reading', $('#uploadreading'));
+		$.ajax({
+			type: 'POST',
+			url: 'upload.php',
+			contentType: false, 
+			processData: false,
+			data: formData,
+			 success: function (data) {
+			   console.log(data);
+			 }
+		});
+	});
     
     
     });
