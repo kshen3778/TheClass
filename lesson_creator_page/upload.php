@@ -1,7 +1,7 @@
 <?php
 //session_start();
 echo $_FILES['reading']['name'];
-echo $_POST['reading'];
+//echo $_POST['reading'];
 /*
 	//echo "upload php script is working";
 	//$j = 0;     // Variable for indexing uploaded image.

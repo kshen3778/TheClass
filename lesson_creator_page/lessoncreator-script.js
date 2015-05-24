@@ -157,9 +157,9 @@ $(document).ready(function() {
 	
     $("#submitchanges").on("click",function(){
 		//Upload files
-		var formData = new FormData($("#confirmreading"));
+		var formData = new FormData();
 		//formData.append('lecture', $('#uploadlecture'));
-		formData.append('reading', $('#uploadreading'));
+		formData.append('reading', $('#uploadreading')[0].files[0]);
 		$.ajax({
 			type: 'POST',
 			url: 'upload.php',
