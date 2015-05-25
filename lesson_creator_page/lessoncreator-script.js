@@ -157,9 +157,11 @@ $(document).ready(function() {
 	
     $("#submitchanges").on("click",function(){
 		//Upload files
-		var formData = new FormData();
-		formData.append('lecture', $('#uploadlecture')[0].files[0]);
+		var formData = new FormData(document.getElementById("confirmresourceform"));
+		//formData.append('lecture', $('#uploadlecture')[0].files[0]);
 		formData.append('reading', $('#uploadreading')[0].files[0]);
+		//alert($('#uploadlecture').val());
+		//alert($('#uploadreading').val());
 		//var title = $("#lessontitle").val();
 		$.ajax({
 			type: 'POST',

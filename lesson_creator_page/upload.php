@@ -1,7 +1,6 @@
 <?php
 //session_start();
-echo $_FILES['reading']['name'];
-echo $_FILES['lecture']['name'];
+echo $_FILES;
 //echo $_POST['reading'];
 /*
 	//echo "upload php script is working";
