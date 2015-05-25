@@ -158,8 +158,9 @@ $(document).ready(function() {
     $("#submitchanges").on("click",function(){
 		//Upload files
 		var formData = new FormData();
-		//formData.append('lecture', $('#uploadlecture'));
+		formData.append('lecture', $('#uploadlecture')[0].files[0]);
 		formData.append('reading', $('#uploadreading')[0].files[0]);
+		//var title = $("#lessontitle").val();
 		$.ajax({
 			type: 'POST',
 			url: 'upload.php',

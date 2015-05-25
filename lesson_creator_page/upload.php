@@ -1,12 +1,13 @@
 <?php
 //session_start();
 echo $_FILES['reading']['name'];
+echo $_FILES['lecture']['name'];
 //echo $_POST['reading'];
 /*
 	//echo "upload php script is working";
 	//$j = 0;     // Variable for indexing uploaded image.
-	$target_path = "../Users/" . $_SESSION['username'] . "/";     // Declaring Path for uploaded files. Upload to folder
-	$filename = $_FILES['fileToUpload']; //file name
+	$target_path = "../Users/" . $_SESSION['username'] . "/Lessons/" . $_POST['title'];     // Declaring Path for uploaded files. Upload to folder
+	$lecture = $_FILES['lecture']; //lecture files
 	$_SESSION['file'] = $_FILES['fileToUpload']['name']; //store the file name as a session
 	
 	//generate temporary directory
@@ -37,6 +38,6 @@ echo $_FILES['reading']['name'];
 		}
 		
 		
-	*/
-
+	
+*/
 ?>
