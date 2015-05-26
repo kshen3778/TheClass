@@ -151,7 +151,7 @@ body{
     width: 1100px;
     background-color: dimgrey;
 }
-#dashboardyouruploads{
+#dashboardyourcourses{
     position: relative;
     display: inline;
     float: left;
@@ -163,7 +163,7 @@ body{
     border-right: solid black 1px;
     cursor:default;
 }
-#myuploadsbox{
+#mycoursesbox{
     position: absolute;
     top: 34px;
     height: 1879px;
@@ -173,7 +173,7 @@ body{
     border-bottom: solid black 1px;
     background-color: white;
 }
-#dashboardyourlikedcontent{
+#dashboardyourtutoringsessions{
     position: relative;
     display: inline;
     float: left;
@@ -185,7 +185,7 @@ body{
     border-bottom: solid black 1px;
     cursor:default;
 }
-#mylikesbox{
+#mytutoringsessionsbox{
     position: absolute;
     top: 34px;
     height: 1879px;
@@ -217,7 +217,29 @@ body{
     border-bottom: solid black 1px;
     background-color: white;
 }
-#dashboardtutoringsessions{
+#dashboardyourhistory{
+    position: relative;
+    display: inline;
+    float: left;
+    background-color:white;
+    height: 32px;
+    width: 99px;
+    border-top: solid black 1px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    cursor: default;
+}
+#myhistorybox{
+    position: absolute;
+    top: 34px;
+    height: 1879px;
+    width: 1098px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    background-color: white;
+}
+#dashboardyourlikes{
     position: relative;
     display: inline;
     float: left;
@@ -228,7 +250,7 @@ body{
     border-bottom: solid black 1px;
     cursor: default;
 }
-#mytutoringsessionsbox{
+#mylikesbox{
     position: absolute;
     top: 34px;
     height: 1879px;
@@ -244,6 +266,6 @@ body{
     float: left;
     background-color:white;
     height: 32px;
-    width: 699px;
+    width: 599px;
     border: solid black 1px;
 }

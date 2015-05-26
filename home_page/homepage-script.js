@@ -64,17 +64,19 @@ $(document).ready(function() {
     
     //fadein tabs animation
     $("#dashboardmystuff").hide();
-    $("#dashboardyouruploads").hide();
-    $("#dashboardyourlikedcontent").hide();
+    $("#dashboardyourcourses").hide();
+    $("#dashboardyourtutoringsessions").hide();
     $("#dashboardyoursubs").hide();
-    $("#dashboardtutoringsessions").hide();
+    $("#dashboardyourhistory").hide();
+    $("#dashboardyourlikes").hide();
     $("#fillinspace").hide();
     
-    $("#dashboardyouruploads").fadeIn(600);
-    $("#dashboardyourlikedcontent").fadeIn(700);
+    $("#dashboardyourcourses").fadeIn(600);
+    $("#dashboardyourtutoringsessions").fadeIn(700);
     $("#dashboardyoursubs").fadeIn(800);
-    $("#dashboardtutoringsessions").fadeIn(900);
-    $("#fillinspace").fadeIn(1000);  
+    $("#dashboardyourhistory").fadeIn(900);
+    $("#dashboardyourlikes").fadeIn(1000);
+    $("#fillinspace").fadeIn(1100);  
     $("#dashboardmystuff").fadeIn(500);
     $("#dashboard").hide();
         $("#dashboard").fadeIn(500);
@@ -83,42 +85,48 @@ $(document).ready(function() {
     //end of fadein
     
     
-        $("#myuploadsbox").show();
-        $("#mylikesbox").hide();
-        $("#mysubsbox").hide();
+        $("#mycoursesbox").show();
         $("#mytutoringsessionsbox").hide();
+        $("#mysubsbox").hide();
+        $("#myhistorybox").hide();
+        $("#mylikesbox").hide();
     
 
         $(".dashboardtab").on("click",function(event){
-            $("#dashboardyouruploads").css({"height":"32px","border-bottom":"solid black 1px"});
-            $("#dashboardyourlikedcontent").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyourcourses").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyourtutoringsessions").css({"height":"32px","border-bottom":"solid black 1px"});
             $("#dashboardyoursubs").css({"height":"32px","border-bottom":"solid black 1px"});
-            $("#dashboardtutoringsessions").css({"height":"32px","border-bottom":"solid black 1px"});
-            $("#myuploadsbox").hide();
-            $("#mylikesbox").hide();
-            $("#mysubsbox").hide();
+            $("#dashboardyourhistory").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#dashboardyourlikes").css({"height":"32px","border-bottom":"solid black 1px"});
+            $("#mycoursesbox").hide();
             $("#mytutoringsessionsbox").hide();
+            $("#mysubsbox").hide();
+            $("#myhistorybox").hide();
+            $("#mylikesbox").hide();
         });
 
     
-        $("#dashboardyouruploads").on("click",function(){
-            $("#dashboardyouruploads").css({"height":"33px","border-bottom":"none"});
-            $("#myuploadsbox").show();
+        $("#dashboardyourcourses").on("click",function(){
+            $("#dashboardyourcourses").css({"height":"33px","border-bottom":"none"});
+            $("#mycoursesbox").show();
         });
-        $("#dashboardyourlikedcontent").on("click",function(){
-            $("#dashboardyourlikedcontent").css({"height":"33px","border-bottom":"none"});
-            $("#mylikesbox").show();
+        $("#dashboardyourtutoringsessions").on("click",function(){
+            $("#dashboardyourtutoringsessions").css({"height":"33px","border-bottom":"none"});
+            $("#mytutoringsessionsbox").show();
 
         });
         $("#dashboardyoursubs").on("click",function(){
             $("#dashboardyoursubs").css({"height":"33px","border-bottom":"none"});
             $("#mysubsbox").show();
         });
-        $("#dashboardtutoringsessions").on("click",function(){
-            $("#dashboardtutoringsessions").css({"height":"33px","border-bottom":"none"});
-            $("#mytutoringsessionsbox").show();
+        $("#dashboardyourhistory").on("click",function(){
+            $("#dashboardyourhistory").css({"height":"33px","border-bottom":"none"});
+            $("#myhistorybox").show();
         });
-    
+        $("#dashboardyourlikes").on("click",function(){
+            $("#dashboardyourlikes").css({"height":"33px","border-bottom":"none"});
+            $("#mylikesbox").show();
+        });
     
     
     

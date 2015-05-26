@@ -42,17 +42,19 @@ session_start();
 
                 <div id="dashboard">
                     <div id="dashboardtabcontainer">
-                        <div id="dashboardyouruploads" class="dashboardtab"><p class="dashboardtabp">my uploads</p></div>
-                        <div id="dashboardyourlikedcontent" class="dashboardtab"><p class="dashboardtabp">my likes</p></div>
+                        <div id="dashboardyourcourses" class="dashboardtab"><p class="dashboardtabp">my courses</p></div>
+                        <div id="dashboardyourtutoringsessions" class="dashboardtab"><p class="dashboardtabp">my tutoring</p></div>
                         <div id="dashboardyoursubs" class="dashboardtab"><p class="dashboardtabp">my subs</p></div>
-                        <div id="dashboardtutoringsessions" class="dashboardtab"><p class="dashboardtabp">my tutoring</p></div>
+                        <div id="dashboardyourhistory" class="dashboardtab"><p class="dashboardtabp">my history</p></div>
+                        <div id="dashboardyourlikes" class="dashboardtab"><p class="dashboardtabp">my likes</p></div>
                         <div id="fillinspace"></div>
                     </div>
                     <div id="dashboardmystuff">
-                        <div id="myuploadsbox">my uploads</div>
-                        <div id="mylikesbox">my likes</div>
+                        <div id="mycoursesbox">my courses</div>
+                        <div id="mytutoringsessionsbox">my tutoring sessions</div>
                         <div id="mysubsbox">my subs box</div>
-                        <div id="mytutoringsessionsbox">my peer tutoring sessions</div>
+                        <div id="myhistorybox">my history</div>
+                        <div id="mylikesbox">my likes</div>
                     </div>
                 </div>
     </div>
