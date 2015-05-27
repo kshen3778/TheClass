@@ -5,6 +5,7 @@ session_start();
 <html>
 	<link rel="stylesheet" type="text/css" href="lessoncreator-stylesheet.css"/>
     	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="http://malsup.github.io/min/jquery.form.min.js"></script>
 	<script type='text/javascript' src='lessoncreator-script.js'></script>
     
 		<head>
@@ -49,7 +50,7 @@ session_start();
             <div id="submitlecture"> Submit Lecture Content</div>
         </div>
 
-        	<form id="confirmresourceform" enctype="multipart/form-data" method="post" style="display: none;">
+        	<form id="confirmresourceform" enctype="multipart/form-data" method="post" action="comment.php" style="display: none;">
 		      <input id="uploadlecture" name="fileToUpload1" type="file" value="Upload Resources"/>
 	       </form>
         
@@ -59,7 +60,7 @@ session_start();
 		
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>
-            <form id="confirmreadingform" enctype="multipart/form-data" method="post" style="display: none;">
+            <form id="confirmreadingform" enctype="multipart/form-data" method="post" action="comment.php" style="display: none;">
 		      <input id="uploadreading" name="fileToUpload2" type="file" value="Upload Resources"/>
 	       </form>
         </div>
