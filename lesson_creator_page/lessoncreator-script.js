@@ -155,7 +155,7 @@ $(document).ready(function() {
 		
     });
 	
-    $("#submitchanges").on("click",function(){
+    $("#confirmresourceandreadingform").on("click",function(){
 		//Upload files
 		//var formData = new FormData(document.getElementById("confirmresourceandreadingform"));
 		//formData.append('lecture', $('#uploadlecture')[0].files[0]);
@@ -169,22 +169,7 @@ $(document).ready(function() {
 			   console.log(data);
 			 }
 		});*/
-		jQuery.AjaxFileUpload({
-            url             : "upload.php",
-            secureurl       : false,
-            fileElementId   : "fileToUpload1",
-            dataType        : 'json',
-            data            : {
-               // if you have another data to pass in your phhp     
-            },
-            success : function ()
-            {
-				console.log("Success");
-             },
-            error  : function(){
-
-            }
-        });
+		
 	});
     
     
