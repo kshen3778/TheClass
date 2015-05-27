@@ -50,8 +50,9 @@ session_start();
             <div id="submitlecture"> Submit Lecture Content</div>
         </div>
 
-        	<form id="confirmresourceform" enctype="multipart/form-data" method="post" action="comment.php" style="display: none;">
-		      <input id="uploadlecture" name="fileToUpload1" type="file" value="Upload Resources"/>
+        	<form id="confirmresourceandreadingform" enctype="multipart/form-data" method="post" action="comment.php" style="display: none;">
+                <input id="uploadlecture" name="fileToUpload1" type="file" value="Upload Resources"/>
+                <input id="uploadreading" name="fileToUpload2" type="file" value="Upload Resources"/>
 	       </form>
         
 		<!-- Text area for supporting reading-->
@@ -60,9 +61,7 @@ session_start();
 		
         <!--reading upload-->
         <div id="insertreading">Insert Reading</div>
-            <form id="confirmreadingform" enctype="multipart/form-data" method="post" action="comment.php" style="display: none;">
-		      <input id="uploadreading" name="fileToUpload2" type="file" value="Upload Resources"/>
-	       </form>
+
         </div>
         <div id="submitchanges">Submit Changes</div>
     </div>
