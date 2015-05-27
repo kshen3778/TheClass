@@ -115,7 +115,7 @@ $(document).ready(function() {
     });
     //click upload form since it's hidden
     $("#submitchanges").on("click",function(){
-        $("confirmresourceandreadingform").click();
+        $("confirmresourceandreadingform").submit();
     });
 	//Submit changes
 	$("#submitchanges").on("click",function(){
