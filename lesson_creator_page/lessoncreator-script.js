@@ -63,10 +63,7 @@ $(document).ready(function() {
     });*/
 	
     //end of navbar js
-	//code for insert lecture
-    $("#submitlecture").on("click",function(){
-        $("#uploadlecture").click();
-    });
+
     //for when the user uploads supporting content or"video"
     $("#uploadlecture").change(function(){
         //check to see if file extensions are valid
@@ -116,7 +113,10 @@ $(document).ready(function() {
 				wrongext = true;
 			}
     });
-	
+    //click upload form since it's hidden
+    $("#submitchanges").on("click",function(){
+        $("confirmresourceandreadingform").click();
+    });
 	//Submit changes
 	$("#submitchanges").on("click",function(){
 		//Save information to datafile
